@@ -7,6 +7,7 @@
 * PlantUML cheatsheet for sequence diagrams
 * Audio Recorder Bookmark
 * High level intro to Docker/Kubernetes
+* ExpressionEvaluatorCs
 
 ## DevOps
 
