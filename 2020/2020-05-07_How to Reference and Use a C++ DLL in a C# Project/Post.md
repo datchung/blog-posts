@@ -3,16 +3,9 @@
 # How to Reference and Use a C/C++ DLL in a C# Project
 
 Table of Contents
-<!-- vscode-markdown-toc -->
-* 1. [ Introduction](#-introduction)
-* 2. [Sample C/C++ Library DLL](#sample-c/c++-library-dll)
-* 3. [Steps](#steps)
-
-<!-- vscode-markdown-toc-config
-	numbering=true
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc -->
+1. [ Introduction](#-introduction)
+2. [Sample C/C++ Library DLL](#sample-c/c++-library-dll)
+3. [Steps](#steps)
 
 ##  1. <a name='-introduction'></a> Introduction
 
