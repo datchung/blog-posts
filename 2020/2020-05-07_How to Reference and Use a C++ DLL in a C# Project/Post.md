@@ -16,10 +16,10 @@ Table of Contents
 
 ##  1. <a name='-introduction'></a> Introduction
 
-Given a library DLL that is written in C/C++, it is straightforward to reference and use the library from another C/C++ application. However, it is also possible to reference and use the library from a C# application. Here's a quick guide on how to achieve that.
+Given a library DLL that is written in C/C++, it is straightforward to reference and use the library from another C/C++ application. It is also possible to reference and use the library from a C# application. Here's a quick guide on how to achieve that.
 
 ##  2. <a name='sample-c/c++-library-dll'></a>Sample C/C++ Library DLL
-Assume the library is called `MyLibrary.dll` and the function to import is `CreateFile` which accepts a  filename of type `char*`.
+Assume that the library is called `MyLibrary.dll` and the function to import is `CreateFile` which accepts a  filename of type `char*`.
 
 ##  3. <a name='steps'></a>Steps
 1. Create a C# Project.  
