@@ -1,4 +1,4 @@
-[Blog Home Page](../README.md)
+[Blog Home Page](../../README.md)
 
 # How to Reference and Use a C/C++ DLL in a C# Project
 
