@@ -1,3 +1,5 @@
+[Blog Home Page](../README.md)
+
 # How to Reference and Use a C/C++ DLL in a C# Project
 
 Table of Contents
@@ -10,7 +12,7 @@ Table of Contents
 	numbering=true
 	autoSave=true
 	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc -->[Blog Home Page](../README.md)
+<!-- /vscode-markdown-toc -->
 
 ##  1. <a name='-introduction'></a> Introduction
 
