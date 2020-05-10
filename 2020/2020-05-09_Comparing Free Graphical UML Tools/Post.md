@@ -2,7 +2,7 @@
 
 # Comparing Free Graphical UML Tools
 
-_Tags: Documentation, Tool, UML_
+_Tags: Comparison, Documentation, Tool, UML_
 
 Table of Contents
 1. [Introduction](#introduction)

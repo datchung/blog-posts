@@ -2,7 +2,7 @@
 
 # How to Reference and Use a C/C++ DLL in a C# Project
 
-_Tags: .NET, C, C++, C#, DLL, Windows_
+_Tags: .NET, C, C++, C#, DLL, Instructional, Windows_
 
 Table of Contents
 1. [ Introduction](#-introduction)
