@@ -26,4 +26,4 @@ Assume that the library is called `MyLibrary.dll` and the function to import is 
 ![DllImportt](4_DllImport.PNG)
 
 ## 3. <a name='comments'></a>Comments
-_Reply to [this tweet](https://twitter.com/innochi_mob/status/1259184974080679940)._
+_Reply to [this tweet](https://twitter.com/innochi_mob/status/1259291390695047170)._
