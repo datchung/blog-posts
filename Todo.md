@@ -11,6 +11,7 @@
 
 * Graphical based UML (drawio)
 * Script based UML (PlantUML)
+* PlantUML Visual Studio Code
 * PlantUML cheatsheet for sequence diagrams
 * Audio Recorder Bookmark
 * High level intro to Docker/Kubernetes
@@ -29,6 +30,9 @@
 
 * Onboarding new employees
 * Managing co-op students
+* Optional meetings
+* Asynchronous meetings
+* Document everything
 
 ## UX
 
