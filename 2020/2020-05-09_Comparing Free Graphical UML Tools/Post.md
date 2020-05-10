@@ -70,4 +70,4 @@ Draw.io is a free general diagram tool with few restrictions and many useful fea
 The free version of Visual Paradigm is not usable for non-personal or commercial purposes, so it is out of the question if that is the required purpose. Lucidchart is promising, but the free account is very limited and the paid account will likely be required for real usage. In the end, Draw.io is the winner with its few restrictions, intuitive design, and general purpose nature.
 
 ## 6. <a name='comments'></a>Comments
-_Reply to [this tweet]()._
+_Reply to [this tweet](https://twitter.com/innochi_mob/status/1259327160835244035)._
