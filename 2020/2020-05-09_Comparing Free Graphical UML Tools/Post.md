@@ -46,18 +46,28 @@ Website: www.lucidchart.com
   * And more
 
 ### Summary
-
-Lucidchart contains a good knowledge base on UML diagrams and is a good learning resource. The Youtube videos are especially helpful. The tool is also single-purpose, specifically for UML diagrams. On the downside, the free account is very limited and in many cases is only suitable for personal use or small projects.
+Lucidchart contains a good knowledge base on UML diagrams and is a good learning resource. The Youtube videos are especially helpful. The tool is also single-purpose, specifically for UML diagrams. On the downside, the free account is very limited and in many cases is only suitable for trial, personal use, or small projects.
 
 
 ## 4. <a name='draw'></a>Draw.io
-No restrictions
-Web and desktop version
-Multi purpose
-Short learning curve
-Learned skills can be reused for other diagrams
+Website: app.diagrams.net
+
+### Pros
+* Available as a web or desktop application
+* Few or no restrictions
+* Multi-purpose diagram tool
+* Short learning curve, intuitive
+* Learned skills can be reused to create other diagrams
+* PlantUML script support
+
+### Cons
+* General purpose tool, not specifically for UML diagrams
+
+### Summary
+Draw.io is a free general diagram tool with few restrictions and many useful features. The only negative is that this is a general purpose tool, not specifically for UML diagrams so some UML features may be lacking compared to other tools.
 
 ## 5. <a name='conclusion'></a>Conclusion
+The free version of Visual Paradigm is not usable for non-personal or commercial purposes, so it is out of the question if that is the required purpose. Lucidchart is promising, but the free account is very limited and the paid account will likely be required for real usage. In the end, Draw.io is the winner with its few restrictions, intuitive design, and general purpose nature.
 
 ## 6. <a name='comments'></a>Comments
 _Reply to [this tweet]()._
