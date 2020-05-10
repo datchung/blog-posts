@@ -9,7 +9,6 @@
 
 ## Dev
 
-* Graphical based UML (drawio)
 * Script based UML (PlantUML)
 * PlantUML Visual Studio Code
 * PlantUML cheatsheet for sequence diagrams
