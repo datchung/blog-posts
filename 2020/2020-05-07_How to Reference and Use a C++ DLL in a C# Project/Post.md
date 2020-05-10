@@ -8,7 +8,7 @@ Table of Contents
 1. [ Introduction](#-introduction)
 2. [Sample C/C++ Library DLL](#sample-c/c++-library-dll)
 3. [Steps](#steps)
-3. [Comments](#comments)
+4. [Comments](#comments)
 
 ##  1. <a name='-introduction'></a> Introduction
 
@@ -27,5 +27,5 @@ Assume that the library is called `MyLibrary.dll` and the function to import is 
 4. Import the `CreateFile` function from the C/C++ DLL with the `DllImport` statement and call the imported function in the C# application.  
 ![DllImportt](4_DllImport.PNG)
 
-## 3. <a name='comments'></a>Comments
+## 4. <a name='comments'></a>Comments
 _Reply to [this tweet](https://twitter.com/innochi_mob/status/1259291390695047170)._
