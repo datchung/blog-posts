@@ -2,6 +2,8 @@
 
 # How to Reference and Use a C/C++ DLL in a C# Project
 
+_Tags: .NET, C, C++, C#, DLL, Windows_
+
 Table of Contents
 1. [ Introduction](#-introduction)
 2. [Sample C/C++ Library DLL](#sample-c/c++-library-dll)
