@@ -1,0 +1,46 @@
+' Start the diagram named UserLoginSequence
+@startuml UserLoginSequence
+
+' Automatically prefix each step with a number
+autonumber
+
+' Don't show actors and particpants at the footer
+hide footbox
+
+' Use monochrome colour scheme 
+skinparam monochrome true
+
+' Disable box shadows 
+skinparam Shadowing false
+
+' Define actors and participants
+actor User
+participant LoginPage
+participant AuthenticationService
+
+' Start User activation box on User lifeline
+activate User
+
+' Message from User to LoginPage and LoginPage activation
+User -> LoginPage ++: Load login page
+
+' Reply from LoginPage to User
+LoginPage --> User: Login page loaded
+
+User -> LoginPage: Input credentials
+
+LoginPage -> AuthenticationService ++: Submit credentials
+
+' Alternative symbol
+alt If credentials valid
+  ' True reply
+  AuthenticationService --> LoginPage: Authentication success
+else
+  ' False reply and AuthenticationService deactivation
+  AuthenticationService --> LoginPage --: Authentication failure
+end
+
+LoginPage --> User: Authentication result
+
+' End the diagram
+@enduml
