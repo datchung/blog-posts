@@ -109,4 +109,4 @@ It is possible to install a Visual Studio Code PlantUML extension. This is convi
 In addition to creating UML diagrams in a graphical editor, having the option to script UML diagrams is beneficial to many. There are pros and cons to both approaches and people who are technically-inclined may prefer the script-based approach.
 
 ## 6. <a name='comments'></a>Comments
-_Reply to [this tweet](https://twitter.com/innochi_mob/status/1259327160835244035)._
+_Reply to [this tweet](https://twitter.com/innochi_mob/status/1259675985454170112)._
