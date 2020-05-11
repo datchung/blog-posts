@@ -42,7 +42,7 @@ The following example will go through scripting a sequence diagram for a theoret
 
 ![User Login Sequence](UserLoginSequence.png)
 
-UserLoginSequence.puml
+`UserLoginSequence.puml` with comments on lines of interest:
 ```
 ' Start the diagram named UserLoginSequence
 @startuml UserLoginSequence
@@ -94,7 +94,7 @@ LoginPage --> User: Authentication result
 
 ## 4. <a name='generate'></a>Generating a Diagram
 
-There are many options to generate a UML diagram with PlantUML.
+Here are some options to generate a UML diagram with PlantUML.
 
 ### PlantUML Local and Web
 
