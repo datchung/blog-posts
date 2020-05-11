@@ -9,7 +9,6 @@
 
 ## Dev
 
-* Script based UML (PlantUML)
 * PlantUML Visual Studio Code
 * PlantUML cheatsheet for sequence diagrams
 * Audio Recorder Bookmark
