@@ -28,6 +28,7 @@
 
 * Onboarding new employees
 * Managing co-op students
+* Remote work best practices
 * Optional meetings
 * Asynchronous meetings
 * Document everything
