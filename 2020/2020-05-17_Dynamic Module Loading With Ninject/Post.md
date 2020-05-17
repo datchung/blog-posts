@@ -27,7 +27,157 @@ Here is a quote from [Ninject's documentation](https://github.com/ninject/Ninjec
 
 ## 4. <a name='example'></a>Example
 
+### Introduction
+
+This is a simple example of how to achieve dynamic module loading with Ninject. There are many ways to do dynamic module loading - this is one of them. In this example, the main console application is a simulated tool box. A tool is dynamically loaded at run time and the sound that it makes is written to the console output. Also included in this example is a basic setup for slotting in a different tools for dynamic module loading.
+
+### Solution Structure
+
+There are four projects:
+1. Drill - the drill module, to be loaded dynamically. The Drill makes a "Whir" sound.
+2. Hammer - the hammer module, to be loaded dynamically. The Hammer makes a "Wham" sound.
+3. Interfaces - interface definitions common to all projects.
+4. ToolBoxApp - console application that will perform the dynamic module loading and output the sound of the dynamically loaded tool. Only one tool can be loaded at a time.
+
+![Solution](1_Sln.PNG)
+
+### Interfaces
+
+This project contains the `ITool` interface as defined below. This common interface will be referenced by the other projects.
+
+`ITool.cs`
+```c#
+namespace Interfaces
+{
+    public interface ITool
+    {
+        string Use();
+    }
+}
+```
+
+### ToolBoxApp
+
+This project has a dependency on the Ninject 3.3.4 Nuget package. The main method:
+1. Creates a Ninject kernel.
+2. Performs dynamic module loading by locating and loading all Ninject modules in the Modules directory.
+3. Gets the dynamically loaded implementation of `ITool`.
+4. Writes the sound that the dynamically loaded tool makes to console output.
+
+`Program.cs`
+```c#
+using Interfaces;
+using Ninject;
+using System;
+
+namespace ToolBoxApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var kernel = new StandardKernel();
+            kernel.Load("Modules\\*.dll");
+
+            var tool = kernel.Get<ITool>();
+            Console.WriteLine(tool.Use());
+            
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+### Drill
+
+This project implements the `Drill` tool and `DrillModule` Ninject module. Ninject will load the `DrillModule` if it is found.
+
+`Drill.cs`
+```c#
+using Interfaces;
+
+namespace Drill
+{
+    public class Drill : ITool
+    {
+        public string Use()
+        {
+            return "Whir";
+        }
+    }
+}
+```
+
+`DrillModule.cs`
+```c#
+using Interfaces;
+using Ninject.Modules;
+
+namespace Drill
+{
+    public class DrillModule : NinjectModule
+    {
+        public override void Load()
+        {
+            Bind<ITool>().To<Drill>();
+        }
+    }
+}
+
+```
+
+### Hammer
+
+This project implements the `Hammer` tool and `HammerModule` Ninject module. Ninject will load the `HammerModule` if it is found.
+
+`Hammer.cs`
+```c#
+using Interfaces;
+
+namespace Hammer
+{
+    public class Hammer : ITool
+    {
+        public string Use()
+        {
+            return "Wham";
+        }
+    }
+}
+```
+
+`HammerModule.cs`
+```c#
+using Interfaces;
+using Ninject.Modules;
+
+namespace Hammer
+{
+    public class HammerModule : NinjectModule
+    {
+        public override void Load()
+        {
+            Bind<ITool>().To<Hammer>();
+        }
+    }
+}
+
+```
+
+### Solution Configurations
+
+
+
+### Build Events
+
+### Running the Application with the Drill Module
+
+### Running the Application with the Hammer Module
+
 ## 5. <a name='conclusion'></a>Conclusion
+
+Ninject makes it easy, ...
+The full source code can be found ...
 
 ## 6. <a name='comments'></a>Comments
 
