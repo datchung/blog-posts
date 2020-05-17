@@ -14,7 +14,7 @@ Table of Contents
 
 ##  1. <a name='introduction'></a>Introduction
 
-Dynamic module loading is the act of locating and loading modules at run-time. Instead of defining what modules and implementations to use via code, define the interfaces of the modules and then load the desired implementations dynamically at run-time.
+Dynamic module loading is the act of locating and loading modules at run-time. Instead of defining what modules and implementations to load via code, define the interfaces of the modules and then bind the desired implementations dynamically at run-time.
 
 ## 2. <a name='use'></a>Use Cases
 
