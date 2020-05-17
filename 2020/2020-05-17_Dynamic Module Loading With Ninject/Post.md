@@ -220,4 +220,4 @@ The full example source code can be found [here](src).
 
 ## 6. <a name='comments'></a>Comments
 
-_Reply to [this tweet]()._
+_Reply to [this tweet](https://twitter.com/innochi_mob/status/1262031587639689216)._
