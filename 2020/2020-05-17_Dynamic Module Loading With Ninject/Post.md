@@ -45,7 +45,7 @@ There are four projects:
 
 This project contains the `ITool` interface as defined below. This common interface will be referenced by the other projects.
 
-`ITool.cs`
+`ITool.cs`:
 ```c#
 namespace Interfaces
 {
@@ -64,7 +64,7 @@ This project has a dependency on the Ninject 3.3.4 Nuget package. The main metho
 3. Gets the dynamically loaded implementation of `ITool`.
 4. Writes the sound that the dynamically loaded tool makes to console output.
 
-`Program.cs`
+`Program.cs`:
 ```c#
 using Interfaces;
 using Ninject;
@@ -92,7 +92,7 @@ namespace ToolBoxApp
 
 This project implements the `Drill` tool and `DrillModule` Ninject module. Ninject will load the `DrillModule` if it is found.
 
-`Drill.cs`
+`Drill.cs`:
 ```c#
 using Interfaces;
 
@@ -108,7 +108,7 @@ namespace Drill
 }
 ```
 
-`DrillModule.cs`
+`DrillModule.cs`:
 ```c#
 using Interfaces;
 using Ninject.Modules;
@@ -130,7 +130,7 @@ namespace Drill
 
 This project implements the `Hammer` tool and `HammerModule` Ninject module. Ninject will load the `HammerModule` if it is found.
 
-`Hammer.cs`
+`Hammer.cs`:
 ```c#
 using Interfaces;
 
@@ -146,7 +146,7 @@ namespace Hammer
 }
 ```
 
-`HammerModule.cs`
+`HammerModule.cs`:
 ```c#
 using Interfaces;
 using Ninject.Modules;
@@ -166,18 +166,57 @@ namespace Hammer
 
 ### Solution Configurations
 
+Solution configurations will be used to enforce which module will be dynamically loaded by `ToolBoxApp`. If the solution is built with the `*_Drill` configuration, then the `DrillModule` will be loaded. If the solution is built with the `*_Hammer` configuration, then the `HammerModule` will be loaded.
 
+`Debug_Drill` configuration (note that the `Hammer` project is not built):
+
+![Debug_Drill](2_Debug_Drill.PNG)
+
+`Debug_Hammer` configuration (note that the `Drill` project is not built):
+
+![Debug_Hammer](3_Debug_Hammer.PNG)
 
 ### Build Events
 
+`ToolBoxApp` pre-build event (this will delete any existing Modules folder and create an empty Modules folder):
+```
+rd "$(TargetDir)Modules" /s /q
+mkdir "$(TargetDir)Modules"
+```
+
+`Drill` post-build event (this will copy Drill.dll to `ToolBoxApp`'s Modules folder):
+```
+xcopy "$(TargetDir)$(TargetFileName)" "$(SolutionDir)ToolBoxApp\$(OutDir)Modules" /i /y
+```
+
+`Hammer` post-build event (this will copy Hammer.dll to `ToolBoxApp`'s Modules folder):
+```
+xcopy "$(TargetDir)$(TargetFileName)" "$(SolutionDir)ToolBoxApp\$(OutDir)Modules" /i /y
+```
+
 ### Running the Application with the Drill Module
+
+1. Select the Solution configuration `Debug_Drill` or `Release_Drill`.
+2. Rebuild the solution.
+3. Verify that Drill.dll exists in `ToolBoxApp`'s Modules folder.
+4. Verify that Hammer.dll does not exist in `ToolBoxApp`'s Modules folder.
+5. Run `ToolBoxApp`.
+   * You should see **Whir** in the console output window.
 
 ### Running the Application with the Hammer Module
 
+1. Select the Solution configuration `Debug_Hammer` or `Release_Hammer`.
+2. Rebuild the solution.
+3. Verify that Hammer.dll exists in `ToolBoxApp`'s Modules folder.
+4. Verify that Drill.dll does not exist in `ToolBoxApp`'s Modules folder.
+5. Run `ToolBoxApp`.
+   * You should see **Wham** in the console output window.
+
 ## 5. <a name='conclusion'></a>Conclusion
 
-Ninject makes it easy, ...
-The full source code can be found ...
+In addition to Ninject being a great dependency injection tool, Ninject also makes dynamic module loading possible. In the example, `ToolBoxApp` dynamically loads all Ninject modules that are present in the Modules folder. The combination of Solution configurations and build events ensure that only one of `DrillModule` (Drill.dll) or `HammerModule` (Hammer.dll) will exist in the Modules folder at a given time.
+
+The full example source code can be found [here](src).
 
 ## 6. <a name='comments'></a>Comments
 
