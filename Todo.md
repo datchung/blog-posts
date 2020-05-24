@@ -19,8 +19,6 @@
 
 ## DevOps
 
-* How to transfer large files to VMware ESXi (eg. ISOs)
-* How to clone a VM in VMware ESXi
 * MS Teams
 * PowerApps - export Channel messages
 
