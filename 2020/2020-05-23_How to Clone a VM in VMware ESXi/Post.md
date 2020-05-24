@@ -46,7 +46,7 @@ In the following steps, the source VM is the VM to clone.
 ### Copy source VM folder with WinSCP
 
 1. Go to Navigator > Host > Actions > Services > Enable Secure Shell (SSH).
-2. Launch WinSCP
+2. Launch WinSCP.
 3. Select SFTP, enter your VMware ESXi's hostname, port number (default 22), user name (default root), and password.
 4. Locate the source VM folder.
 5. Copy the source VM folder.
