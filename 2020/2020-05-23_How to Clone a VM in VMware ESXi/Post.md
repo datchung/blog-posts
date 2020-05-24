@@ -54,4 +54,4 @@ In the following steps, the source VM is the VM to clone.
 
 ## 4. <a name='comments'></a>Comments
 
-_Reply to [this tweet]()._
+_Reply to [this tweet](https://twitter.com/innochi_mob/status/1264386350368862208)._
