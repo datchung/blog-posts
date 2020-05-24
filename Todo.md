@@ -11,6 +11,7 @@
 
 * PlantUML Visual Studio Code
 * PlantUML cheatsheet for sequence diagrams
+* PlantUML decision tree
 * Audio Recorder Bookmark
 * High level intro to Docker/Kubernetes
 * ExpressionEvaluatorCs
@@ -25,7 +26,6 @@
 # Teamwork and Leadership
 
 * Onboarding new employees
-* Managing co-op students
 * Remote work best practices
 * Optional meetings
 * Asynchronous meetings
