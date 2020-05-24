@@ -2,7 +2,7 @@
 
 # How to Clone a VM in VMware ESXi
 
-_Tags: Administration, Virtualization, VM_
+_Tags: Administration, Virtualization, VM, VMware_
 
 Table of Contents
 1. [Introduction](#introduction)
