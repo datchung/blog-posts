@@ -3,68 +3,54 @@
 skinparam monochrome true
 skinparam Shadowing false
 
-|Product Owner|
 start
-:**Backlog Grooming**
+
+:**Backlog Grooming - Product Owner**
 1. Prioritize backlog items;
 
-|#AntiqueWhite|Scrum Master|
-:**Sprint Planning**
+' T shirt size estimate
+
+:**Sprint Planning - Scrum Master**
 2. Lead ceremony;
 
-|Product Owner|
-:**Sprint Planning**
+:**Sprint Planning - Product Owner**
 3. Present top backlog items;
 
+:**Sprint Planning - Developers, QAs**
+4. Estimate top backlog items with the scale 1, 2, 4, 8, etc.
+The units could be hours or story points;
 
-|Developers|
+:**Sprint Planning - Developers, QAs**
+5. Decide on how many top backlog
+items can be worked on in the sprint;
+
+:**Sprint Planning - Developers, QAs**
+6. Create sprint backlog;
+
+:**Daily Scrum - Scrum Master**
+7. Lead ceremony;
+
+:**Daily Scrum - Developers, QA**
+8. Each person answers the following questions:
+i. What did I accomplish yesterday?
+ii. What will I accomplish today?
+iii. Are there any impediments in my way?;
+
 split
 
-:**Sprint Planning**
-4a. With QA(s), decide on how many top backlog
-items can be worked on in the sprint;
+:**Development - Developers**
+9a. Begin work on backlog items - development;
 
-|Developers|
-:**Sprint Planning**
-5a. With QA(s), create sprint backlog;
+:**Development Complete - Developers**
+;
 
-|#AntiqueWhite|QA(s)|
 split again
 
-:**Sprint Planning**
-4b. With Developers, decide on how many top backlog
-items can be worked on in the sprint;
-
-|QA(s)|
-:**Sprint Planning**
-5b. With Developers, create sprint backlog;
+:**QA - QAs**
+9b. Begin work on backlog items - test cases;
 
 end split
 
-|Scrum Master|
-:**Daily Scrum**
-6. Lead ceremony;
-
-|Developers|
-split
-
-:**Daily Scrum**
-7a. Each person answers the following questions:
-  i. What did I accomplish yesterday?
-  ii. What will I accomplish today?
-  iii. Are there any impediments in my way?;
-
-|QA(s)|
-split again
-
-:**Daily Scrum**
-7b. Each person answers the following questions:
-  i. What did I accomplish yesterday?
-  ii. What will I accomplish today?
-  iii. Are there any impediments in my way?;
-
-end split
-
-stop
+end
 
 @enduml
