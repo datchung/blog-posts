@@ -18,7 +18,7 @@ start
 
 
 |Developers|
-fork
+split
 
 :**Sprint Planning**
 4a. With QA(s), decide on how many top backlog
@@ -29,7 +29,7 @@ items can be worked on in the sprint;
 5a. With QA(s), create sprint backlog;
 
 |#AntiqueWhite|QA(s)|
-fork again
+split again
 
 :**Sprint Planning**
 4b. With Developers, decide on how many top backlog
@@ -39,14 +39,14 @@ items can be worked on in the sprint;
 :**Sprint Planning**
 5b. With Developers, create sprint backlog;
 
-end fork
+end split
 
 |Scrum Master|
 :**Daily Scrum**
 6. Lead ceremony;
 
 |Developers|
-fork
+split
 
 :**Daily Scrum**
 7a. Each person answers the following questions:
@@ -55,7 +55,7 @@ fork
   iii. Are there any impediments in my way?;
 
 |QA(s)|
-fork again
+split again
 
 :**Daily Scrum**
 7b. Each person answers the following questions:
@@ -63,7 +63,7 @@ fork again
   ii. What will I accomplish today?
   iii. Are there any impediments in my way?;
 
-end fork
+end split
 
 stop
 
