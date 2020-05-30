@@ -21,7 +21,7 @@ The next step was to decide on the best way of documenting the SDLC. Note that t
 
 ### Classic SDLC Diagram
 
-For example, the one presented [here by Mike Cohn](http://www.ambysoft.com/essays/agileLifecycle.html#Retirement) or [this one by PMI](https://www.pmi.org/disciplined-agile/lifecycle/agile-lifecycle).
+For example, the one presented [here by Mike Cohn](http://www.ambysoft.com/essays/agileLifecycle.html#LifecycleScope) or [this one by PMI](https://www.pmi.org/disciplined-agile/lifecycle/agile-lifecycle).
 
 #### Pros
 
@@ -57,12 +57,14 @@ An example is presented in the section [Role-Based SDLC Diagram](#diagram).
 #### Pros
 
 * Depicts the roles involved and their responsibilities
+* Focused on day to day aspects of SDLC
 * Depicts the high-level steps of an SDLC
 * Picture is easy to understand
 
 #### Cons
 
 * Less familiar than the Classic SDLC Diagram - I have not encountered this type of diagram anywhere else before
+* Less focus on overall/long term aspect of SDLC (eg. Release, Production, Retirement, etc.)
 
 ## 3. <a name='diagram'></a>Role-Based SDLC Diagram
 
