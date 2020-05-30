@@ -1,0 +1,58 @@
+@startuml RoleBasedSdlc
+
+skinparam monochrome true
+skinparam Shadowing false
+
+|Product Owner|
+start
+:**Backlog Grooming**
+1. Prioritize backlog items;
+
+|#AntiqueWhite|Scrum Master|
+:**Sprint Planning**
+2. Lead ceremony;
+
+|Product Owner|
+:**Sprint Planning**
+3. Present top backlog items;
+
+|Developers|
+:**Sprint Planning**
+4a. With QA(s), decide on how many top backlog
+items can be worked on in the sprint;
+
+|#AntiqueWhite|QA(s)|
+:**Sprint Planning**
+4b. With Developers, decide on how many top backlog
+items can be worked on in the sprint;
+
+|Developers|
+:**Sprint Planning**
+5a. With QA(s), create sprint backlog;
+
+|QA(s)|
+:**Sprint Planning**
+5b. With Developers, create sprint backlog;
+
+|Scrum Master|
+:**Daily Scrum**
+6. Lead ceremony;
+
+|Developers|
+:**Daily Scrum**
+7a. Each person answers the following questions:
+  i. What did I accomplish yesterday?
+  ii. What will I accomplish today?
+  iii. Are there any impediments in my way?;
+
+|QA(s)|
+:**Daily Scrum**
+7b. Each person answers the following questions:
+  i. What did I accomplish yesterday?
+  ii. What will I accomplish today?
+  iii. Are there any impediments in my way?;
+
+
+stop
+
+@enduml
