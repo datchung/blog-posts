@@ -16,29 +16,38 @@ start
 :**Sprint Planning**
 3. Present top backlog items;
 
+
 |Developers|
+fork
+
 :**Sprint Planning**
 4a. With QA(s), decide on how many top backlog
-items can be worked on in the sprint;
-
-|#AntiqueWhite|QA(s)|
-:**Sprint Planning**
-4b. With Developers, decide on how many top backlog
 items can be worked on in the sprint;
 
 |Developers|
 :**Sprint Planning**
 5a. With QA(s), create sprint backlog;
 
+|#AntiqueWhite|QA(s)|
+fork again
+
+:**Sprint Planning**
+4b. With Developers, decide on how many top backlog
+items can be worked on in the sprint;
+
 |QA(s)|
 :**Sprint Planning**
 5b. With Developers, create sprint backlog;
+
+end fork
 
 |Scrum Master|
 :**Daily Scrum**
 6. Lead ceremony;
 
 |Developers|
+fork
+
 :**Daily Scrum**
 7a. Each person answers the following questions:
   i. What did I accomplish yesterday?
@@ -46,12 +55,15 @@ items can be worked on in the sprint;
   iii. Are there any impediments in my way?;
 
 |QA(s)|
+fork again
+
 :**Daily Scrum**
 7b. Each person answers the following questions:
   i. What did I accomplish yesterday?
   ii. What will I accomplish today?
   iii. Are there any impediments in my way?;
 
+end fork
 
 stop
 
