@@ -71,15 +71,15 @@ Below is the ISO view along with the cut list. Horizontal boards are 1.9cm (3/4"
 5. Layout horizontal boards and posts.
 ![Layout for horizontal board to posts](20200530_135203.jpg)
 
-6. Nail lower horizontal board to post.
+6. Nail lower horizontal boards to posts.
 ![Nail lower horizontal board to post](20200530_135218.jpg)
 
-7. Nail upper horizontal board to post.
+7. Nail upper horizontal boards to posts.
 ![Nail upper horizontal board to post](20200530_135221.jpg)
 
-8. Repeat steps 2-6 for the back of the frame.
+8. Repeat steps 2-7 for the back of the frame.
 
-9. Attache back and front of frame with horizontal boards.
+9. Attach back and front of frame with horizontal boards.
 
 10. This is what the corner looks like. The front horizontal board extends past the post to cover the orthoganal board's end grain.
 ![Floating butt joint at corner](20200530_163841.jpg)
