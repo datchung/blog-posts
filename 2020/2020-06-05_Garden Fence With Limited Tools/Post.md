@@ -57,7 +57,23 @@ Below is the ISO view along with the cut list. Horizontal boards are 1.9cm (3/4"
 
 ## 4. <a name='frame'></a>Building the Frame
 
-[Ninject](https://github.com/ninject/Ninject) is a dependency injection tool that includes a feature which enables dynamic module loading - the focus of this article.
+![Lumber](20200530_121426.jpg)
+
+![Rip cut to width](20200530_130019.jpg)
+
+![Spacing for lower horizontal board to post](20200530_133933.jpg)
+
+![Layout for lower horizontal board to posts](20200530_135203.jpg)
+
+![Nail lower horizontal board to post](20200530_135218.jpg)
+
+![Nail upper horizontal board to post](20200530_135221.jpg)
+
+![Floating butt joint at corner](20200530_163841.jpg)
+
+![Check for square enough once in a while](20200530_163908.jpg)
+
+![Completed frame](20200530_164129.jpg)
 
 ## 5. <a name='digging'></a>Digging
 
