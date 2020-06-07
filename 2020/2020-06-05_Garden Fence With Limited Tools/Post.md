@@ -30,7 +30,7 @@ The left and top walls are fence posts and fence boards. Dimensions are in cm.
 
 ### ISO View
 
-Below is the ISO view along with the cut list. Horizontal boards are 1.9cm (3/4") thick. Posts are 3.8x3.8cm (1.5x1.5"). The upper horizontal boards are half the width of the lower horizontal boards. This keeps the upper weight down and saves costs (since the structure is strong enough even with narrower upper boards). The lower boards need to be wide since half of the width will be buried underground to act as the garden bed's edging. Dimensions are in cm.
+Below is the ISO view along with the cut list. Horizontal boards are 1.9cm (3/4") thick. Posts are 3.8x3.8cm (1.5x1.5"). The upper horizontal boards are half the width of the lower horizontal boards. This keeps the upper weight down and saves costs (since the structure is strong enough even with narrower upper boards). The lower boards need to be wide since half of the width will be buried underground to act as the garden bed's edging. The posts will be 25cm under ground. Dimensions are in cm.
 
 ![ISO View](iso.jpg)
 
@@ -57,22 +57,35 @@ Below is the ISO view along with the cut list. Horizontal boards are 1.9cm (3/4"
 
 ## 4. <a name='frame'></a>Building the Frame
 
+1. Cross cut lumber to length.
 ![Lumber](20200530_121426.jpg)
 
+2. Rip cut lumber in half for upper horizontal boards. A shim is placed at the cut end of the board to reduce pinching.
 ![Rip cut to width](20200530_130019.jpg)
 
+3. Place the lower horizontal board onto the post. The distance from the  middle of the board to the bottom of the post should be 25cm since the post will be under ground 25cm. The horizontal board should extend past the post to cover the end grain of the orthoganal board. A square is used to ensure squareness.
 ![Spacing for lower horizontal board to post](20200530_133933.jpg)
 
-![Layout for lower horizontal board to posts](20200530_135203.jpg)
+4. Layout horizontal boards and posts.
+![Layout for horizontal board to posts](20200530_135203.jpg)
 
+5. Nail lower horizontal board to post.
 ![Nail lower horizontal board to post](20200530_135218.jpg)
 
+6. Nail upper horizontal board to post.
 ![Nail upper horizontal board to post](20200530_135221.jpg)
 
+7. Repeat steps 2-6 for the back of the frame.
+
+8. Attache back and front of frame with horizontal boards.
+
+9. This is what the corner looks like. The front horizontal board extends past the post to cover the orthoganal board's end grain.
 ![Floating butt joint at corner](20200530_163841.jpg)
 
+10. Check to ensure that the frame is "square enough" once in a while.
 ![Check for square enough once in a while](20200530_163908.jpg)
 
+11. This is the completed frame.
 ![Completed frame](20200530_164129.jpg)
 
 ## 5. <a name='digging'></a>Digging
