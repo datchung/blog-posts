@@ -9,7 +9,7 @@ Table of Contents
 2. [Dimensions](#dimensions)
 3. [Materials and Tools](#materials)
 4. [Building the Frame](#frame)
-5. [Digging](#digging)
+5. [Installation](#installation)
 6. [Installing Chicken Wire](#wire)
 7. [Conclusion](#conclusion)
 8. [Comments](#comments)
@@ -54,6 +54,7 @@ Below is the ISO view along with the cut list. Horizontal boards are 1.9cm (3/4"
 * **Square and measuring tape** for marking and measuring.
 * **Spade shovel** for edging and digging.
 * **Hand shovel** for digging deep post holes.
+* **Scissors** for cutting chicken wire.
 
 ## 4. <a name='frame'></a>Building the Frame
 
@@ -88,13 +89,51 @@ Below is the ISO view along with the cut list. Horizontal boards are 1.9cm (3/4"
 ![Check for square enough once in a while](20200530_163908.jpg)
 
 12. This is the completed frame.
-![Completed frame](20200530_164129.jpg)
+![Completed frame](20200530_164129_2.jpg)
 
-## 5. <a name='digging'></a>Digging
+## 5. <a name='installation'></a>Installation
+
+1. Use a spade shovel to form a rectangular edge for the garden bed.
+
+2. Dig deep enough around the edge so that half of the lower horizontal board will be underground.
+![Dig edge](20200530_164425.jpg)
+
+3. Dig the post holes with a hand shovel deep enough so that the posts will be 25cm underground.
+
+4. Place the frame inside the garden bed.
 
 ## 6. <a name='wire'></a>Installing Chicken Wire
 
+1. Screw the 3/4" screws at regularly spaced intervals on the frame.
+
+2. Measure and cut the chicken wire.
+
+3. Place the chicken wire on the frame and stretch the chicken wire so that it is tight and under tension and then place it onto the screws to keep it in place.
+
+4. Cut 2 boards for the front access door.
+
+5. Secure the chicken wire to a board. I used screws and washers.
+![Door board](20200601_210753.jpg)
+
+6. Install the front access door chicken wire to the top of the frame.
+
+7. Screw a small block to the lower horizontal board to keep the front access door board in place.
+![Door lock](20200602_083607.jpg)
+
+Lift the board to open the front access door.
+
+![Door lock 2](20200602_083547.jpg)
+
+8. Repeat steps 5-7 for the other door.
+
 ## 7. <a name='conclusion'></a>Conclusion
+
+The final product.
+![Final](20200602_083513.jpg)
+![Final 2](20200603_160828.jpg)
+
+I also cut left over boards to cover the surrounding area to reduce unwanted vegetation growth.
+![Final 2](20200602_083622.jpg)
 
 ## 8. <a name='comments'></a>Comments
 
