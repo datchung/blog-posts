@@ -132,6 +132,9 @@ The final product.
 ![Final](20200602_083513.jpg)
 ![Final 2](20200603_160828.jpg)
 
+With one access door open.
+![Door open](20200603_161642.jpg)
+
 I also cut left over boards to cover the surrounding area to reduce unwanted vegetation growth.
 ![Final 2](20200602_083622.jpg)
 
