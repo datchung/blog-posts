@@ -3,6 +3,7 @@ My blog posts written in markdown and grouped by year.
 
 # 2020
 
+* [2020-07-01 Connect to a SQL Server Database with an IP Address](2020/2020-07-01_Connect%20to%20SQL%20Server%20Database%20with%20an%20IP%20Address/Post.md)
 * [2020-06-07 Garden Fence With Limited Tools](2020/2020-06-07_Garden%20Fence%20With%20Limited%20Tools/Post.md)
 * [2020-05-23 How to Clone a VM in VMware ESXi](2020/2020-05-23_How%20to%20Clone%20a%20VM%20in%20VMware%20ESXi/Post.md)
 * [2020-05-17 Dynamic Module Loading With Ninject](2020/2020-05-17_Dynamic%20Module%20Loading%20With%20Ninject/Post.md)
