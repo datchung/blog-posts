@@ -30,31 +30,49 @@ The following software is used in this article:
 
 4. Check "Allow remote connections to the server".
 
+![Allow remote connections](AllowRemoteConnections.png)
+
 5. Open SQL Server Configuration Manager.
 
 6. In the left pane, select SQL Server Network Configuration > Protocols for SQLEXPRESS.
 
 7. In the right pane, enable TCP/IP.
 
+![Configuration manager enable TCP IP](ConfigManagerEnableTcpIp.png)
+
 8. In the right pane, right click TCP/IP > IP Addresses.
 
 9. Under IPAll, clear out TCP Dynamic Ports and set TCP Port to 1433.
+
+![IpAll](IpAll.png)
 
 10. In the left pane, select SQL Server Services.
 
 11. In the right pane, select SQL Server (SQLEXPRESS) > right click > Restart.
 
+![Restart](Restart.png)
+
 12. Open Windows Firewall with Advanced Security.
 
-13. Create a new Inbound rule to allow TCP port 1433.
+13. Follow the wizard to create a new Inbound rule to allow TCP port 1433.
+
+![Firewall exception](FirewallException.png)
 
 ## 3. <a name='database'></a>Set Up a Sample Database
 
 1. Create database.
 
+![Create database](CreateDatabase.png)
+
+![Create database2](CreateDatabase2.png)
+
 2. Create login and user.
 
+![Create login and user](CreateLoginUser.png)
+
 3. Assign user memberships.
+
+![Assign user memberships](UserMemberships.png)
 
 ## 4. <a name='test'></a>Test the Connection
 
@@ -62,7 +80,11 @@ The following software is used in this article:
 
 2. Double click the test.udl file to open it.
 
-3. Input information.
+![Udl](Udl.png)
+
+3. Input information. Note the use of ",1433" to specify the port number.
+
+![Udl](Udl2.png)
 
 4. Click Test Connection. The result should be "Test connection succeeded".
 
