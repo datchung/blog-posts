@@ -1,8 +1,8 @@
 [Blog Home Page](../../README.md)
 
-# Connect to SQL Server Database with an IP Address
+# Connect to a SQL Server Database with an IP Address
 
-_Tags: Administration, Virtualization, VM, VMware_
+_Tags: SQL, SQLServer_
 
 Table of Contents
 1. [Introduction](#introduction)
