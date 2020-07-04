@@ -1,11 +1,12 @@
 # Todo Blog Topics
 
 ## Types (One Template Per Type)
+
 * Generic/no form
 * Howto/instructional
 * Product/project info
 * Cheat sheet
-* Course/conference notes
+* Course/conference notes/review
 
 ## Dev
 
@@ -17,11 +18,13 @@
 * ExpressionEvaluatorCs
 * Markdown cheatsheet - most common usages
 * Teamcity build templates for .NET Framework and Core
+* SQL Server remote connection using IP address
 
 ## DevOps
 
 * MS Teams
 * PowerApps - export Channel messages
+* PowerApps - search Channel messages
 
 # Teamwork and Leadership
 
