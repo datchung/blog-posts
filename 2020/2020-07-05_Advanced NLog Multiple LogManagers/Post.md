@@ -43,11 +43,29 @@ The programmatic logging configuration defined in the Nuget package will actuall
 
 ## 4. <a name='example'></a>Example
 
-### Introduction
+### Nuget Package/Library
 
-### Solution Structure
+Programmatic configuration
 
-### Interfaces
+```c#
+```
+
+### Application
+
+Configuration File
+
+```xml
+```
+
+Custom log manager
+
+```c#
+```
+
+Using the custom log manager
+
+```c#
+```
 
 ## 5. <a name='conclusion'></a>Conclusion
 
