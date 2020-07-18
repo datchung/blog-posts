@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLogMultipleLogManagers", "NLogMultipleLogManagers\NLogMultipleLogManagers.csproj", "{D0F1A5C6-DDAB-4EFC-B915-E4D643DC13A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApplication", "MainApplication\MainApplication.csproj", "{1032AAC1-64FB-40A0-8666-7F3467B2965A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D0F1A5C6-DDAB-4EFC-B915-E4D643DC13A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0F1A5C6-DDAB-4EFC-B915-E4D643DC13A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0F1A5C6-DDAB-4EFC-B915-E4D643DC13A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0F1A5C6-DDAB-4EFC-B915-E4D643DC13A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1032AAC1-64FB-40A0-8666-7F3467B2965A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1032AAC1-64FB-40A0-8666-7F3467B2965A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1032AAC1-64FB-40A0-8666-7F3467B2965A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1032AAC1-64FB-40A0-8666-7F3467B2965A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5567AB74-0B8C-4E2C-859A-0FFC0C394598}
+		SolutionGuid = {41812F8E-E0A9-4B0A-97B8-CE071952CE5B}
 	EndGlobalSection
 EndGlobal

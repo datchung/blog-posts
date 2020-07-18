@@ -1,4 +1,6 @@
-﻿namespace NLogMultipleLogManagers
+﻿using System;
+
+namespace MainApplication
 {
     class Program
     {
