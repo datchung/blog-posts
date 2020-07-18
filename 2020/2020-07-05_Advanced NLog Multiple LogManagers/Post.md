@@ -39,13 +39,28 @@ var config = new NLog.Config.LoggingConfiguration();
 NLog.LogManager.Configuration = config;
 ```
 
-The programmatic logging configuration defined in the Nuget package will actually overwrite the application's logging configuration based on `NLog.config` and break the application's logging.
+The programmatic logging configuration defined in the Nuget package will  overwrite the application's logging configuration based on `NLog.config` and break the application's logging.
 
 ## 4. <a name='example'></a>Example
+
+### Configure Logging in the Main Application
+
+### Configure Logging in the Library
+
+### Reference the Library in the Main Application
+
+### Introducing a Custom LogManager in the Main Application
+
 
 ### Nuget Package/Library
 
 Programmatic configuration
+
+```c#
+// This will overwrite the application's logging since it assigns the Configuration property
+```
+
+Using logging (straightforward way)
 
 ```c#
 ```
