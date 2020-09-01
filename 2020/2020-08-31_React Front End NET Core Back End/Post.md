@@ -9,8 +9,8 @@ Table of Contents
 2. [Create a .NET Core Back End](#create-back)
 3. [Create a ReactJS Front End](#create-front)
 4. [Host the Front End and Back End on the Same Domain](#host)
-5. [WorkFlow: Editing the Back End](#edit-back)
-6. [WorkFlow: Editing the Front End](#edit-front)
+5. [Work Flow: Editing the Back End](#edit-back)
+6. [Work Flow: Editing the Front End](#edit-front)
 7. [Conclusion](#conclusion)
 8. [Comments](#comments)
 
@@ -92,11 +92,11 @@ npx create-react-app my-app
 ![Debug project back end](8_Debug.PNG)
 7. Optional: remove unnecessary files from the project (eg. _Layout.cshtml, etc).
 
-## 5. <a name='edit-back'></a>WorkFlow: Editing the Back End
+## 5. <a name='edit-back'></a>Work Flow: Editing the Back End
 
 You can edit the back end in the usual way: modify a file, build the solution, then run the project (start debugging).
 
-## 6. <a name='edit-front'></a>WorkFlow: Editing the Front End
+## 6. <a name='edit-front'></a>Work Flow: Editing the Front End
 
 1. Run the project (start debugging) in Visual Studio to ensure the back end is running.
 2. Run the ReactJS app with `npm start`.
