@@ -52,14 +52,6 @@ namespace WebApp
                 routes.MapRoute(
                     name: "api",
                     template: "api/{controller=Default}/{action=Index}/{id?}");
-
-                //routes.MapSpaFallbackRoute(
-                //    name: "spa-fallback",
-                //    defaults: new
-                //    {
-                //        controller = "Home",
-                //        action = "Index"
-                //    });
             });
         }
     }
