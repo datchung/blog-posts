@@ -109,6 +109,8 @@ You can edit the back end in the usual way: modify a file, build the solution, t
 
 This was part one of a multi-part series on how to create a web app with a ReactJS front end and a .NET Core backend. This initial part was about setting up the ReactJS and .NET Core projects and hosting them on the same domain. Future parts will continue to build off of this initial part.
 
+The full example source code can be found [here](src).
+
 ## 8. <a name='comments'></a>Comments
 
 _Reply to [this tweet]()._
