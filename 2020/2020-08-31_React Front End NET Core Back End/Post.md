@@ -102,7 +102,7 @@ You can edit the back end in the usual way: modify a file, build the solution, t
 2. Run the ReactJS app with `npm start`.
 3. Edit the front end as desired. This allows you to make use of the conveniences that `create-react-app` has already set up.
 4. Stop debugging the project in Visual Studio.
-5. Build the front end with `npm build`.
+5. Build the front end with `npm run build`.
 6. Run the project (start debugging) in Visual Studio and the edited front end will be hosted on the same domain as the back end.
 
 ## 7. <a name='conclusion'></a>Conclusion
