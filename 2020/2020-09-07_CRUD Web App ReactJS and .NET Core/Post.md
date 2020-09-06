@@ -33,4 +33,4 @@ The full example source code can be found [here](src).
 
 ## 6. <a name='comments'></a>Comments
 
-_Reply to [this tweet](https://twitter.com/innochi_mob/status/1300639608376614912)._
+_Reply to [this tweet]()._
