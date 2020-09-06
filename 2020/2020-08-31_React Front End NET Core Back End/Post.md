@@ -2,7 +2,7 @@
 
 # Create a Web App with ReactJS and .NET Core (Part 1)
 
-_Tags: .NET, Back End, C#, Front End, Full Stack, Javascript, React_
+_Tags: .NET, Back End, C#, Front End, Full Stack, Javascript, React, REST_
 
 Table of Contents
 1. [Introduction](#introduction)
