@@ -6,17 +6,16 @@ _Tags: .NET, Back End, C#, Front End, Full Stack, Javascript, React, REST_
 
 Table of Contents
 1. [Introduction](#introduction)
-2. [Create a .NET Core Back End](#create-back)
-3. [Create a ReactJS Front End](#create-front)
-4. [Host the Front End and Back End on the Same Domain](#host)
-5. [Work Flow: Editing the Back End](#edit-back)
-6. [Work Flow: Editing the Front End](#edit-front)
-7. [Conclusion](#conclusion)
-8. [Comments](#comments)
+2. [Create a Controller with CRUD Actions](#crud-controller)
+3. [Create CRUD UI Components](#crud-ui)
+4. [Conclusion](#conclusion)
+5. [Comments](#comments)
 
 ## 1. <a name='introduction'></a>Introduction
 
 ## 2. <a name='crud-controller'></a>Create a Controller with CRUD Actions
+
+In this section, we will set up an Entity Framework `DbContext`, create a class for our model, create a controller with CRUD actions using Entity Framework, and add Swagger API docs.
 
 ### Packages
 
