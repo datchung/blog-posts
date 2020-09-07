@@ -22,7 +22,14 @@ namespace WebApp.Controllers
             _context.Database.EnsureCreated();
         }
 
-        // GET: api/Notes
+        /// <summary>
+        /// GET: api/Notes
+        /// </summary>
+        /// <remarks>
+        /// Remarks here
+        /// </remarks>
+        /// <returns></returns>
+        /// <response code="200">Returns list of notes</response>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Note>>> GetNotes()
         {
