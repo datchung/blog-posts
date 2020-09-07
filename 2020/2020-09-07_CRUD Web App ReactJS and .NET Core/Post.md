@@ -21,9 +21,7 @@ Table of Contents
 DbContext
 InMemoryDatabase
 Crud controller
-swagger
-
-## 3. <a name='swagger'></a>Optional: Add Swagger API Docs
+Swagger
 
 ## 4. <a name='crud-ui'></a>Create CRUD UI Components
 
