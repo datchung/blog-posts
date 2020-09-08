@@ -182,6 +182,12 @@ public async Task<ActionResult<IEnumerable<Note>>> GetNotes()
 
 ## 4. <a name='crud-ui'></a>Create CRUD UI Components
 
+Router
+NotesPage
+API call
+MockJax
+Loader
+
 ## 5. <a name='conclusion'></a>Conclusion
 
 The full example source code can be found [here](src).
