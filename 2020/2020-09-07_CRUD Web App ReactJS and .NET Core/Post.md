@@ -1,6 +1,6 @@
 [Blog Home Page](../../README.md)
 
-# Create a CRUD Web App with ReactJS and .NET Core (Part 2)
+# Create a Web App with ReactJS and .NET Core (Part 2)
 
 _Tags: .NET, Back End, C#, Entity Framework, Front End, Full Stack, Javascript, React, REST_
 
