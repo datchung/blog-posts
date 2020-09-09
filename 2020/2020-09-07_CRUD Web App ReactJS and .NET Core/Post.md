@@ -187,6 +187,10 @@ NotesPage
 API call
 MockJax
 Loader
+Create
+Read
+Update
+Delete
 
 ## 5. <a name='conclusion'></a>Conclusion
 
