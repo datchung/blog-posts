@@ -2,7 +2,7 @@
 
 # Create a CRUD Web App with ReactJS and .NET Core (Part 2)
 
-_Tags: .NET, Back End, C#, Front End, Full Stack, Javascript, React, REST_
+_Tags: .NET, Back End, C#, Entity Framework, Front End, Full Stack, Javascript, React, REST_
 
 Table of Contents
 1. [Introduction](#introduction)
