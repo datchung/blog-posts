@@ -185,7 +185,7 @@ public async Task<ActionResult<IEnumerable<Note>>> GetNotes()
 Router
 NotesPage
 API call
-MockJax
+Mock API
 Loader
 Create
 Read
