@@ -9,16 +9,12 @@ import './App.css';
 import Layout from './components/common/Layout';
 import Home from './components/home/Home';
 import About from './components/about/About';
-import NotesPage from './components/notes/NotesPage';
 
 function App() {
   return (
     <Router>
       <Layout>
         <Switch>
-          <Route path="/notes">
-            <NotesPage />
-          </Route>
           <Route path="/about">
             <About />
           </Route>

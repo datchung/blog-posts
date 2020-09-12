@@ -12,9 +12,6 @@ export default class Navigation extends React.Component {
           <li>
             <Link to="/about">About</Link>
           </li>
-          <li>
-            <Link to="/notes">Notes</Link>
-          </li>
         </ul>
       </nav>
     );
