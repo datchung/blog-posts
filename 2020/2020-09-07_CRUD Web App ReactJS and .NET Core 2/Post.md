@@ -7,11 +7,6 @@ _Tags: .NET, Back End, C#, Entity Framework, Front End, Full Stack, Javascript, 
 Table of Contents
 1. [Introduction](#introduction)
 2. [Install Packages](#packages)
-3. [Set Up a DbContext](#dbcontext)
-4. [Specify a Database Type](#database)
-5. [Create a Controller with CRUD Actions](#controller)
-6. [Add Seed Data](#seed)
-7. [Add API Documentation with Swagger](#doc)
 8. [Conclusion](#conclusion)
 5. [Comments](#comments)
 
@@ -26,11 +21,17 @@ This is a continuation from the previous part, which can be found [here](../2020
 
 Copy index.cshtml
 
-Add routing to UI
+Add routing
 
 Add notes page
 
 Add API mock
+
+Add new note
+
+Add update note
+
+Add delete note
 
 ## 8. <a name='conclusion'></a>Conclusion
 
