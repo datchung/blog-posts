@@ -13,7 +13,7 @@ Table of Contents
 6. [Add Seed Data](#seed)
 7. [Add API Documentation with Swagger](#doc)
 8. [Conclusion](#conclusion)
-5. [Comments](#comments)
+9. [Comments](#comments)
 
 ## 1. <a name='introduction'></a>Introduction
 
