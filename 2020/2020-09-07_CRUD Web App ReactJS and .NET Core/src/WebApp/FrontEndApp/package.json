@@ -13,13 +13,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "json-server": "node_modules\\.bin\\json-server --watch src\\json-mock-api\\db.json --routes src\\json-mock-api\\routes.json --port 5000",
-    "dev": "concurrently \"npm start\" \"npm run json-server\"",
     "build": "react-scripts build && (if exist ../wwwroot rmdir \"../wwwroot\" /q /s) && (move build ../wwwroot) && (copy ..\\wwwroot\\index.html ..\\Views\\Home\\Index.cshtml /y)",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -34,9 +31,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "concurrently": "^5.3.0",
-    "json-server": "^0.16.1"
   }
 }

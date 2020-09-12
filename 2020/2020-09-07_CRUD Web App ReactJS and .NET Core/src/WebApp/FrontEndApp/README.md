@@ -4,10 +4,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm run dev`
-
-Runs the app in development mode (equivalent to `npm start`) and also run a json-server to mock API requests.
-
 ### `npm start`
 
 Runs the app in the development mode.<br />
