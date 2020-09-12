@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && (if exist ../wwwroot rmdir \"../wwwroot\" /q /s) && (move build ../wwwroot) && (copy ..\\wwwroot\\index.html ..\\Views\\Home\\Index.cshtml /y)",
+    "build": "react-scripts build && (if exist ../wwwroot rmdir \"../wwwroot\" /q /s) && move build ../wwwroot",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

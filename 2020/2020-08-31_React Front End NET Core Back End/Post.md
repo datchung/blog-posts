@@ -75,20 +75,22 @@ npx create-react-app my-app
 ```
 "scripts": {
     ...
-    "build": "react-scripts build && (if exist ../wwwroot rmdir \"../wwwroot\" /q /s) && (move build ../wwwroot) && (copy ..\\wwwroot\\index.html ..\\Views\\Home\\Index.cshtml /y)",
+    "build": "react-scripts build && (if exist ../wwwroot rmdir \"../wwwroot\" /q /s) && move build ../wwwroot",
     ...
 ```
-2. Remove the following lines from "Views/_ViewStart.cshtml".
+2. Copy the contents of the index.html file that was built in the previous step.
+3. Paste into "Views/Home/Index.cshtml".
+4. Remove the following lines from "Views/_ViewStart.cshtml".
 ```
 {
     Layout = "_Layout";
 }
 ```
-3. Run the project (start debugging) and you should see the front end ReactJS app render:
+5. Run the project (start debugging) and you should see the front end ReactJS app render:
 ![Debug project front end](7_DebugReact.PNG)
-4. Navigate to /api/notes and you should still see the response to an API `GET /api/notes` request. This demonstates that both the ReactJS app and .NET Core back end are being hosted from the same domain.
+6. Navigate to /api/notes and you should still see the response to an API `GET /api/notes` request. This demonstates that both the ReactJS app and .NET Core back end are being hosted from the same domain.
 ![Debug project back end](8_Debug.PNG)
-5. Optional: remove unnecessary files from the project (eg. _Layout.cshtml, etc).
+7. Optional: remove unnecessary files from the project (eg. _Layout.cshtml, etc).
 
 ## 5. <a name='edit-back'></a>Work Flow: Editing the Back End
 
