@@ -23,7 +23,7 @@ export default class NotesPage extends React.Component {
       <Fragment>
         <h1>Notes</h1>
 
-        <Link to="/create-note"><button>Add Note</button></Link>
+        <Link to="/notes/create"><button>Add Note</button></Link>
 
         <table>
           <thead>
@@ -36,9 +36,13 @@ export default class NotesPage extends React.Component {
           <tbody>
             {
               this.state.notes.map(note => {
-                return <tr key={note.noteId}>
+                return <tr key={note.id}>
                   <td>{note.createdDate}</td>
-                  <td>{note.title}</td>
+                  <td>
+                    <Link to={`/notes/${note.id}`}>
+                      {note.title}
+                    </Link>
+                  </td>
                   <td>{note.content}</td>
                 </tr>
               })

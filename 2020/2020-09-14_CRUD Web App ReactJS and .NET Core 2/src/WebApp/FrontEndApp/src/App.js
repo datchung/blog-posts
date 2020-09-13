@@ -11,17 +11,21 @@ import Home from './components/home/Home';
 import About from './components/about/About';
 import NotesPage from './components/notes/NotesPage';
 import CreateNotePage from './components/notes/CreateNotePage';
+import UpdateNotePage from './components/notes/UpdateNotePage';
 
 function App() {
   return (
     <Router>
       <Layout>
         <Switch>
+          <Route path="/notes/create">
+            <CreateNotePage />
+          </Route>
+          <Route path="/notes/:noteId">
+              <UpdateNotePage />
+          </Route>
           <Route path="/notes">
             <NotesPage />
-          </Route>
-          <Route path="/create-note">
-            <CreateNotePage />
           </Route>
           <Route path="/about">
             <About />
