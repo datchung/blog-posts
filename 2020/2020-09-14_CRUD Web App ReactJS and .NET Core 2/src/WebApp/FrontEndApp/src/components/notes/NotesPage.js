@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 export default class NotesPage extends React.Component {
   constructor() {
@@ -22,7 +23,9 @@ export default class NotesPage extends React.Component {
       <section>
         <h1>Notes</h1>
 
-        <table className="table">
+        <Link to="/create-note"><button>Add Note</button></Link>
+
+        <table>
           <thead>
             <tr>
               <th>Created</th>

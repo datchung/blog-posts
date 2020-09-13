@@ -10,6 +10,7 @@ import Layout from './components/common/Layout';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import NotesPage from './components/notes/NotesPage';
+import CreateNotePage from './components/notes/CreateNotePage';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         <Switch>
           <Route path="/notes">
             <NotesPage />
+          </Route>
+          <Route path="/create-note">
+            <CreateNotePage />
           </Route>
           <Route path="/about">
             <About />

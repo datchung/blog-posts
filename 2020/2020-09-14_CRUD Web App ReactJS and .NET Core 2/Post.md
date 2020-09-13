@@ -27,6 +27,8 @@ Add notes page
 
 Add API mock
 
+Switch to bulma css?
+
 Add new note
 
 Add update note
