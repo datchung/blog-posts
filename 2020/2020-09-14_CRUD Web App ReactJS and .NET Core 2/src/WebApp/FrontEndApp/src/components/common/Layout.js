@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Navigation from './Navigation';
 
 export default class Layout extends React.Component {
   render() {
     return (
-      <section>
+      <Fragment>
         <Navigation />
-        <section className="App">
+        <div className="App">
           {this.props.children}
-        </section>
-      </section>
+        </div>
+      </Fragment>
     );
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 
 class CreateNotePage extends React.Component {
@@ -47,7 +47,7 @@ class CreateNotePage extends React.Component {
 
     render() {
         return (
-            <section>
+            <Fragment>
             <h1>Create Note</h1>
             <form onSubmit={this.handleSubmit}>
                 <div>
@@ -69,7 +69,7 @@ class CreateNotePage extends React.Component {
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
-            </section>
+            </Fragment>
         );
     }
 }

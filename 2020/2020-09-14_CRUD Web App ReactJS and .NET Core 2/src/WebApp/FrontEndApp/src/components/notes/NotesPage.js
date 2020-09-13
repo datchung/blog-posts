@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from "react-router-dom";
 
 export default class NotesPage extends React.Component {
@@ -20,7 +20,7 @@ export default class NotesPage extends React.Component {
 
   render() {
     return (
-      <section>
+      <Fragment>
         <h1>Notes</h1>
 
         <Link to="/create-note"><button>Add Note</button></Link>
@@ -45,7 +45,7 @@ export default class NotesPage extends React.Component {
             }
           </tbody>
         </table>
-      </section>
+      </Fragment>
     );
   }
 }
