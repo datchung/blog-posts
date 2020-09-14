@@ -27,7 +27,7 @@ class UpdateNotePage extends React.Component {
     async handleSubmit(e, state) {
         e.preventDefault();
     
-        fetch('/api/notes', {
+        fetch(`/api/notes/${state.id}`, {
           body: JSON.stringify(state),
           cache: 'no-cache',
           headers: {
@@ -36,7 +36,7 @@ class UpdateNotePage extends React.Component {
           method: 'PUT'
         })
         .then(rsp => {
-          if (rsp.status === 201 || rsp.status === 204) {
+          if (rsp.status === 200) {
             this.props.history.push('/notes');
           }
         })

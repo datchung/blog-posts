@@ -5,10 +5,11 @@ export default class NoteForm extends React.Component {
         super(props);
     
         this.state = {
-          title: '',
-          content: '',
-          isStateInitialized: false,
-          submitted: false
+            id: null,
+            title: '',
+            content: '',
+            isStateInitialized: false,
+            submitted: false
         };
     
         this.handleTitleChange = this.handleTitleChange.bind(this);
@@ -21,6 +22,7 @@ export default class NoteForm extends React.Component {
             return;
 
         this.setState({ isStateInitialized: true });
+        this.setState({ id: this.props.initialState.id });
         this.setState({ title: this.props.initialState.title });
         this.setState({ content: this.props.initialState.content });
     }
