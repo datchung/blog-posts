@@ -15,6 +15,24 @@ export default class NoteForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidUpdate() {
+        if(this.props.note.title !== this.state.title) {
+            this.setState(function(state, props) {
+                return {
+                  title: props.note.title
+                };
+            });
+        }
+
+        if(this.props.note.content !== this.state.content) {
+            this.setState(function(state, props) {
+                return {
+                    content: props.note.content
+                };
+            });
+        }
+    }
+
     handleTitleChange(e) {
         this.setState({ title: e.target.value });
     }
