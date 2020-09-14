@@ -7,6 +7,7 @@ export default class NoteForm extends React.Component {
         this.state = {
           title: '',
           content: '',
+          isStateInitialized: false,
           submitted: false
         };
     
@@ -16,21 +17,12 @@ export default class NoteForm extends React.Component {
     }
 
     componentDidUpdate() {
-        if(this.props.note.title !== this.state.title) {
-            this.setState(function(state, props) {
-                return {
-                  title: props.note.title
-                };
-            });
-        }
+        if(this.state.isStateInitialized || this.props.initialState == null)
+            return;
 
-        if(this.props.note.content !== this.state.content) {
-            this.setState(function(state, props) {
-                return {
-                    content: props.note.content
-                };
-            });
-        }
+        this.setState({ isStateInitialized: true });
+        this.setState({ title: this.props.initialState.title });
+        this.setState({ content: this.props.initialState.content });
     }
 
     handleTitleChange(e) {

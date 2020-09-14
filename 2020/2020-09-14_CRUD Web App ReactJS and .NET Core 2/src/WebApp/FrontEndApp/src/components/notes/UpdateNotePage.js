@@ -51,7 +51,7 @@ class UpdateNotePage extends React.Component {
             <h1>Edit Note</h1>
             <NoteForm
                 onSubmit={this.handleSubmit}
-                note={this.state.note} />
+                initialState={this.state.note} />
             </Fragment>
         );
     }
