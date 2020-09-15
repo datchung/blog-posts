@@ -11,6 +11,7 @@ class UpdateNotePage extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
     componentDidMount() {
@@ -45,6 +46,22 @@ class UpdateNotePage extends React.Component {
         });
     }
 
+    async handleDelete(e) {
+        e.preventDefault();
+    
+        fetch(`/api/notes/${this.state.note.id}`, {
+          method: 'DELETE'
+        })
+        .then(rsp => {
+          if (rsp.status === 200) {
+            this.props.history.push('/notes');
+          }
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    }
+
     render() {
         return (
             <Fragment>
@@ -52,6 +69,7 @@ class UpdateNotePage extends React.Component {
             <NoteForm
                 onSubmit={this.handleSubmit}
                 initialState={this.state.note} />
+            <button onClick={this.handleDelete}>Delete</button>
             </Fragment>
         );
     }
