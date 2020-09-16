@@ -1,6 +1,6 @@
 [Blog Home Page](../../README.md)
 
-# Create a Web App with ReactJS and .NET Core (Part 1)
+# Create a ReactJS and .NET Core Web App (Part 1: Baseline Projects)
 
 _Tags: .NET, Back End, C#, Front End, Full Stack, Javascript, React, REST_
 
