@@ -6,9 +6,11 @@ export default class Layout extends React.Component {
     return (
       <Fragment>
         <Navigation />
-        <div className="App">
-          {this.props.children}
-        </div>
+        <section className="section">
+          <div className="App container">
+            {this.props.children}
+          </div>
+        </section>
       </Fragment>
     );
   }
