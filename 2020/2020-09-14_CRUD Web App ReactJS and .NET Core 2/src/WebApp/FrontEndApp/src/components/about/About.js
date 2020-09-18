@@ -4,7 +4,7 @@ export default class About extends React.Component {
   render() {
     return (
       <Fragment>
-        <h1>About</h1>
+        <h1 className="title">About</h1>
       </Fragment>
     );
   }

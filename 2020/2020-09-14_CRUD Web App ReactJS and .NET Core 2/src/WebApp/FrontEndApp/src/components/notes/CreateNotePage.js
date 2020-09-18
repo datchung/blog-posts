@@ -33,7 +33,7 @@ class CreateNotePage extends React.Component {
     render() {
         return (
             <Fragment>
-            <h1>Create Note</h1>
+            <h1 className="title">Create Note</h1>
             <NoteForm onSubmit={this.handleSubmit} />
             </Fragment>
         );

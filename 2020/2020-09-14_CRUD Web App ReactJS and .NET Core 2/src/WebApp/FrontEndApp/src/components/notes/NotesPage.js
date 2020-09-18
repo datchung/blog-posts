@@ -21,7 +21,7 @@ export default class NotesPage extends React.Component {
   render() {
     return (
       <Fragment>
-        <h1>Notes</h1>
+        <h1 className="title">Notes</h1>
 
         <Link to="/notes/create"><button>Add Note</button></Link>
 
