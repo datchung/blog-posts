@@ -23,9 +23,9 @@ export default class NotesPage extends React.Component {
       <Fragment>
         <h1 className="title">Notes</h1>
 
-        <Link to="/notes/create"><button>Add Note</button></Link>
+        <Link to="/notes/create"><button className="button is-primary is-outlined">Add Note</button></Link>
 
-        <table>
+        <table className="table">
           <thead>
             <tr>
               <th>Created</th>
