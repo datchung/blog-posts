@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
+import MainTitle from '../common/MainTitle';
 import NoteForm from './NoteForm';
 
 class CreateNotePage extends React.Component {
@@ -33,7 +34,7 @@ class CreateNotePage extends React.Component {
     render() {
         return (
             <Fragment>
-            <h1 className="title">Create Note</h1>
+            <MainTitle>Create Note</MainTitle>
             <NoteForm onSubmit={this.handleSubmit} />
             </Fragment>
         );

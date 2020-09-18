@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
+import MainTitle from '../common/MainTitle';
 import NoteForm from './NoteForm';
 
 class UpdateNotePage extends React.Component {
@@ -65,7 +66,7 @@ class UpdateNotePage extends React.Component {
     render() {
         return (
             <Fragment>
-            <h1 className="title">Edit Note</h1>
+            <MainTitle>Edit Note</MainTitle>
             <NoteForm
                 onSubmit={this.handleSubmit}
                 initialState={this.state.note} />

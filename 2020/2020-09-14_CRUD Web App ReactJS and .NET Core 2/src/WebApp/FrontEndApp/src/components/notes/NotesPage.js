@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import MainTitle from '../common/MainTitle';
+import PrimaryButton from '../common/PrimaryButton';
 
 export default class NotesPage extends React.Component {
   constructor() {
@@ -21,9 +23,9 @@ export default class NotesPage extends React.Component {
   render() {
     return (
       <Fragment>
-        <h1 className="title">Notes</h1>
+        <MainTitle>Notes</MainTitle>
 
-        <Link to="/notes/create"><button className="button is-primary is-outlined">Add Note</button></Link>
+        <Link to="/notes/create"><PrimaryButton>Add Note</PrimaryButton></Link>
 
         <table className="table">
           <thead>

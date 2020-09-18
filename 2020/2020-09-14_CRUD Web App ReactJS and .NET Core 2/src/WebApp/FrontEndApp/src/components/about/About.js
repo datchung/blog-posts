@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
+import MainTitle from '../common/MainTitle';
 
 export default class About extends React.Component {
   render() {
     return (
       <Fragment>
-        <h1 className="title">About</h1>
+        <MainTitle>About</MainTitle>
       </Fragment>
     );
   }
