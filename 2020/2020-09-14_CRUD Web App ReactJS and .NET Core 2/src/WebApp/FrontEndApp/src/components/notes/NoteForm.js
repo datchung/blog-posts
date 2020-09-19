@@ -43,24 +43,32 @@ export default class NoteForm extends React.Component {
         return (
             <Fragment>
             <form onSubmit={this.handleSubmit}>
-                <div>
-                    <label>Title</label>
-                    <input
-                        id="titleInput"
-                        type="text"
-                        value={this.state.title}
-                        onChange={this.handleTitleChange} />
+            <div className="field">
+                    <label className="label">Title</label>
+                    <div className="control">
+                        <input
+                            id="titleInput"
+                            className="input"
+                            type="text"
+                            value={this.state.title}
+                            onChange={this.handleTitleChange} />
+                    </div>
                 </div>
-                <div>
-                    <label>Content</label>
-                    <textarea
-                        id="contentInput"
-                        cols="100"
-                        rows="10"
-                        value={this.state.content}
-                        onChange={this.handleContentChange} />
+                <div className="field">
+                    <label className="label">Content</label>
+                    <div className="control">
+                        <textarea
+                            id="contentInput"
+                            className="textarea"
+                            cols="100"
+                            rows="10"
+                            value={this.state.content}
+                            onChange={this.handleContentChange} />
+                    </div>
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <div class="control">
+                    <button type="submit" className="button is-link">Submit</button>
+                </div>
             </form>
             </Fragment>
         );

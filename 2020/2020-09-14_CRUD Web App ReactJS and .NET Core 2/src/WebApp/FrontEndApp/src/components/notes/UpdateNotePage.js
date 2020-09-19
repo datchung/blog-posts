@@ -65,13 +65,17 @@ class UpdateNotePage extends React.Component {
 
     render() {
         return (
-            <Fragment>
-            <MainTitle>Edit Note</MainTitle>
-            <NoteForm
-                onSubmit={this.handleSubmit}
-                initialState={this.state.note} />
-            <button onClick={this.handleDelete}>Delete</button>
-            </Fragment>
+          <Fragment>
+          <MainTitle>Edit Note</MainTitle>
+          <NoteForm
+              onSubmit={this.handleSubmit}
+              initialState={this.state.note} />
+          <button 
+            className="button is-light mt-5"
+            onClick={this.handleDelete}>
+            Delete Note
+          </button>
+          </Fragment>
         );
     }
 }
