@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PrimaryButton from '../common/PrimaryButton';
 
 export default class NoteForm extends React.Component {
     constructor(props) {
@@ -67,7 +68,7 @@ export default class NoteForm extends React.Component {
                     </div>
                 </div>
                 <div class="control">
-                    <button type="submit" className="button is-link">Submit</button>
+                    <PrimaryButton type="submit">Submit</PrimaryButton>
                 </div>
             </form>
             </Fragment>
