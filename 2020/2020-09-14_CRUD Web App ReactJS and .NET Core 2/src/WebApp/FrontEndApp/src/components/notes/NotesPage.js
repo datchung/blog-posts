@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import MainTitle from '../common/MainTitle';
 import PrimaryButton from '../common/PrimaryButton';
+import NotesApi from '../../api/NotesApi';
 
 export default class NotesPage extends React.Component {
   constructor() {
@@ -10,8 +11,7 @@ export default class NotesPage extends React.Component {
   }
 
   componentDidMount() {
-    fetch("/api/notes")
-      .then(rsp => rsp.json())
+    NotesApi.getNotes()
       .then(notes => {
         this.setState({ notes: notes });
       })

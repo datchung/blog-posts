@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import MainTitle from '../common/MainTitle';
 import NoteForm from './NoteForm';
+import NotesApi from '../../api/NotesApi';
 
 class UpdateNotePage extends React.Component {
     constructor(props) {
@@ -29,14 +30,7 @@ class UpdateNotePage extends React.Component {
     async handleSubmit(e, state) {
         e.preventDefault();
     
-        fetch(`/api/notes/${state.id}`, {
-          body: JSON.stringify(state),
-          cache: 'no-cache',
-          headers: {
-            'content-type': 'application/json'
-          },
-          method: 'PUT'
-        })
+        NotesApi.updateNote(state)
         .then(rsp => {
           if (rsp.status === 200) {
             this.props.history.push('/notes');
@@ -50,9 +44,7 @@ class UpdateNotePage extends React.Component {
     async handleDelete(e) {
         e.preventDefault();
     
-        fetch(`/api/notes/${this.state.note.id}`, {
-          method: 'DELETE'
-        })
+        NotesApi.deleteNote(this.state.note.id)
         .then(rsp => {
           if (rsp.status === 200) {
             this.props.history.push('/notes');
