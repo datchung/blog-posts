@@ -68,7 +68,7 @@ export default class NoteForm extends React.Component {
                     </div>
                 </div>
                 <div class="control">
-                    <PrimaryButton type="submit">Submit</PrimaryButton>
+                    <PrimaryButton type="submit">Save Note</PrimaryButton>
                 </div>
             </form>
             </Fragment>
