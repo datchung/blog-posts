@@ -30,7 +30,7 @@ class UpdateNotePage extends React.Component {
     async handleSubmit(e, state) {
         e.preventDefault();
     
-        NotesApi.updateNote(state)
+        NotesApi.update(state)
         .then(rsp => {
           if (rsp.status === 200) {
             this.props.history.push('/notes');

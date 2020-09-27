@@ -3,7 +3,7 @@ var NotesApi = (function() {
         return '/api/notes';
     }
   
-    function createNote(note) {
+    function create(note) {
         return fetch(_getBaseUrl(), {
             body: JSON.stringify(note),
             cache: 'no-cache',
@@ -14,12 +14,12 @@ var NotesApi = (function() {
           });
     }
 
-    function getNotes() {
+    function get() {
         return fetch(_getBaseUrl())
             .then(rsp => rsp.json());
     }
 
-    function updateNote(note) {
+    function update(note) {
         return fetch(`${_getBaseUrl()}/${note.id}`, {
             body: JSON.stringify(note),
             cache: 'no-cache',
@@ -37,9 +37,9 @@ var NotesApi = (function() {
     }
   
     return {
-        createNote: createNote,
-        getNotes: getNotes,
-        updateNote: updateNote,
+        create: create,
+        get: get,
+        update: update,
         deleteNote: deleteNote
     };
   }());

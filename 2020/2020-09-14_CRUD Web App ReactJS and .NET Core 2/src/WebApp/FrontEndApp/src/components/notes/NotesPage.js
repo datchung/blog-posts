@@ -11,7 +11,7 @@ export default class NotesPage extends React.Component {
   }
 
   componentDidMount() {
-    NotesApi.getNotes()
+    NotesApi.get()
       .then(notes => {
         this.setState({ notes: notes });
       })

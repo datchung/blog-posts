@@ -14,7 +14,7 @@ class CreateNotePage extends React.Component {
     async handleSubmit(e, state) {
         e.preventDefault();
     
-        NotesApi.createNote(state)
+        NotesApi.create(state)
         .then(rsp => {
           if (rsp.status === 201 || rsp.status === 204) {
             this.props.history.push('/notes');
