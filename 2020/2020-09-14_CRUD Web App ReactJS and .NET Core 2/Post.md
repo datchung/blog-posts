@@ -16,29 +16,268 @@ This is a continuation from the previous part, which can be found [here](../2020
 
 ## 2. <a name='packages'></a>Install Packages
 
-1. Install the following Nuget packages.
-   * 
+1. Install the following npm packages.
+    * react-router-dom, for routing in the react app
+    * json-server, for API mocking
+    * concurrently, for running multiple scripts from one command
+    
+## 3. <a name='indexcshtml'></a>Modify Build Script to Automatically Generate "index.cshtml"
 
-Copy index.cshtml
+1. Open package.json.
+2. Edit the "scripts" section as follows
+   ```
+   "scripts": {
+      ...
+      "build": "react-scripts build && (if exist ../wwwroot rmdir \"../wwwroot\" /q /s) && (move build ../wwwroot) && (copy ..\\wwwroot\\index.html ..\\Views\\Home\\Index.cshtml /y)",
+      ...
+   },
+   ```
+   * The last part of this script will copy the built index.html to the appropriate ASP directory with the proper file name (Index.cshtml)
+   * This is a convinience improvement so that the developer doesn't have to manually copy and rename the built index.html file
 
-Add routing
+## 5. <a name='routing'></a>Use Bulma CSS For Styling
 
-Add notes page
+1. Install bulma
 
-Add API mock
+   `npm install bulma`
 
-Switch to bulma css?
+2. Edit index.js to import bulma
 
-Add new note
+   ```js
+   import 'bulma/css/bulma.css';
+   ```
 
-Add update note
+3. Remove all existing custom styles App.css
 
-Add delete note
+## 4. <a name='baseline'></a>Add Base Line Components and Pages
 
-## 8. <a name='conclusion'></a>Conclusion
+1. Create the following directory structure under src
+
+```
+api
+components
+   about
+   common
+   home
+   notes
+json-mock-api
+```
+
+2. Add the components/common/Navigation.js component. This is based on bulma's responsive navigation component.
+
+   ```js
+   import React from 'react';
+   import { Link } from "react-router-dom";
+
+   export default class Navigation extends React.Component {
+      toggleBurgerMenu() {
+         document.querySelector('.navbar-menu').classList.toggle('is-active');
+      }
+      
+      render() {
+         return (
+            <nav className="navbar has-background-light" role="navigation" aria-label="main navigation">
+            <div className="container">
+               <div className="navbar-brand">
+                  <Link to="/" className="navbar-item is-size-5 has-text-weight-semibold">React App</Link>
+
+                  <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic"
+                  onClick={this.toggleBurgerMenu}>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  </a>
+               </div>
+
+               <div id="navbarBasic" className="navbar-menu">
+                  <div className="navbar-start">
+                  <Link to="/about" className="navbar-item" onClick={this.toggleBurgerMenu}>About</Link>
+                  <Link to="/notes" className="navbar-item" onClick={this.toggleBurgerMenu}>Notes</Link>
+                  </div>
+               </div>
+            </div>
+            </nav>
+         );
+      }
+   }
+   ```
+
+3. Add the components/common/Layout.js component.
+   ```js
+   import React, { Fragment } from 'react';
+   import Navigation from './Navigation';
+
+   export default class Layout extends React.Component {
+      render() {
+         return (
+            <Fragment>
+            <Navigation />
+            <section className="section">
+               <div className="App container">
+                  {this.props.children}
+               </div>
+            </section>
+            </Fragment>
+         );
+      }
+   }
+   ```
+
+4. Add the components/common/MainTitle.js component.
+   ```js
+   import React from 'react';
+
+   export default class MainTitle extends React.Component {
+      render() {
+         return (
+            <h1 className="title">{this.props.children}</h1>
+         );
+      }
+   }
+   ```
+
+5. Add the components/common/PrimaryButton.js component.
+   ```js
+   import React from 'react';
+
+   export default class PrimaryButton extends React.Component {
+      render() {
+         return (
+            <button className="button is-primary" {...this.props}>
+                  {this.props.children}
+            </button>
+         );
+      }
+   }
+   ```
+
+6. Add the components/about/About.js component.
+   ```js
+   import React, { Fragment } from 'react';
+   import MainTitle from '../common/MainTitle';
+
+   export default class About extends React.Component {
+      render() {
+         return (
+            <Fragment>
+            <MainTitle>About</MainTitle>
+            </Fragment>
+         );
+      }
+   }
+   ```
+
+7. Add the components/notes/CreateNotePage.js component.
+   ```js
+   import React, { Fragment } from 'react';
+   import MainTitle from '../common/MainTitle';
+
+   export default class Home extends React.Component {
+      render() {
+         return (
+            <Fragment>
+            <MainTitle>CreateNotePage</MainTitle>
+            </Fragment>
+         );
+      }
+   }
+   ```
+
+8. Add the components/notes/NotesPage.js component.
+   ```js
+   import React, { Fragment } from 'react';
+   import MainTitle from '../common/MainTitle';
+
+   export default class NotesPage extends React.Component {
+      render() {
+         return (
+            <Fragment>
+            <MainTitle>NotesPage</MainTitle>
+            </Fragment>
+         );
+      }
+   }
+   ```
+
+9. Add the components/notes/UpdateNotePage.js component.
+   ```js
+   import React, { Fragment } from 'react';
+   import MainTitle from '../common/MainTitle';
+
+   export default class UpdateNotePage extends React.Component {
+      render() {
+         return (
+            <Fragment>
+            <MainTitle>UpdateNotePage</MainTitle>
+            </Fragment>
+         );
+      }
+   }
+   ```
+
+## 4. <a name='routing'></a>Add Routing
+
+1. Install react-router-dom
+   
+   `npm install react-router-dom`
+2. Modify App.js
+   ```js
+   import React from 'react';
+   import {
+   BrowserRouter as Router,
+   Switch,
+   Route
+   } from "react-router-dom";
+   import './App.css';
+   import Layout from './components/common/Layout';
+   import Home from './components/home/Home';
+   import About from './components/about/About';
+   import NotesPage from './components/notes/NotesPage';
+   import CreateNotePage from './components/notes/CreateNotePage';
+   import UpdateNotePage from './components/notes/UpdateNotePage';
+
+   function App() {
+   return (
+      <Router>
+         <Layout>
+         <Switch>
+            <Route path="/notes/create">
+               <CreateNotePage />
+            </Route>
+            <Route path="/notes/:noteId">
+               <UpdateNotePage />
+            </Route>
+            <Route path="/notes">
+               <NotesPage />
+            </Route>
+            <Route path="/about">
+               <About />
+            </Route>
+            <Route path="/">
+               <Home />
+            </Route>
+         </Switch>
+         </Layout>
+      </Router>
+   );
+   }
+
+   export default App;
+   ```
+
+## 6. <a name='routing'></a>Add Notes Page
+
+## 7. <a name='routing'></a>Add API Mock
+
+## 8. <a name='routing'></a>Add New Note
+
+## 9. <a name='routing'></a>Add Update Note
+
+## 10. <a name='routing'></a>Add Delete Note
+
+## 11. <a name='conclusion'></a>Conclusion
 
 The full example source code can be found [here](src).
 
-## 9. <a name='comments'></a>Comments
+## 12. <a name='comments'></a>Comments
 
 _Reply to [this tweet]()._
