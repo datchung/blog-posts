@@ -37,6 +37,8 @@ This is a continuation from the previous part, which can be found [here](../2020
 
 ## 5. <a name='routing'></a>Use Bulma CSS For Styling
 
+Bulma is a popular CSS styling framework. The following steps are for installing and using Bulma in the web app.
+
 1. Install bulma
 
    `npm install bulma`
@@ -49,9 +51,9 @@ This is a continuation from the previous part, which can be found [here](../2020
 
 3. Remove all existing custom styles App.css
 
-## 4. <a name='baseline'></a>Add Base Line Components and Pages
+## 4. <a name='baseline'></a>Add Base Line Components
 
-1. Create the following directory structure under src
+1. Create the following directory structure under the web app's src directory.
 
 ```
 api
@@ -63,7 +65,7 @@ components
 json-mock-api
 ```
 
-2. Add the components/common/Navigation.js component. This is based on bulma's responsive navigation component.
+2. Add the components/common/Navigation.js component. This will be used as the navigation bar for the web app. It is based on bulma's responsive navigation component.
 
    ```js
    import React from 'react';
@@ -101,7 +103,8 @@ json-mock-api
    }
    ```
 
-3. Add the components/common/Layout.js component.
+3. Add the components/common/Layout.js component. This component will be the parent layout for each page for the web app.
+
    ```js
    import React, { Fragment } from 'react';
    import Navigation from './Navigation';
@@ -122,7 +125,8 @@ json-mock-api
    }
    ```
 
-4. Add the components/common/MainTitle.js component.
+4. Add the components/common/MainTitle.js component. Each page will have a component to display the page's title.
+
    ```js
    import React from 'react';
 
@@ -135,7 +139,8 @@ json-mock-api
    }
    ```
 
-5. Add the components/common/PrimaryButton.js component.
+5. Add the components/common/PrimaryButton.js component. This is the primary button component for the main call to action (CTA).
+
    ```js
    import React from 'react';
 
@@ -150,23 +155,8 @@ json-mock-api
    }
    ```
 
-6. Add the components/about/About.js component.
-   ```js
-   import React, { Fragment } from 'react';
-   import MainTitle from '../common/MainTitle';
+6. Add the components/home/Home.js component.
 
-   export default class About extends React.Component {
-      render() {
-         return (
-            <Fragment>
-            <MainTitle>About</MainTitle>
-            </Fragment>
-         );
-      }
-   }
-   ```
-
-7. Add the components/notes/CreateNotePage.js component.
    ```js
    import React, { Fragment } from 'react';
    import MainTitle from '../common/MainTitle';
@@ -175,14 +165,56 @@ json-mock-api
       render() {
          return (
             <Fragment>
-            <MainTitle>CreateNotePage</MainTitle>
+            <MainTitle>Home</MainTitle>
             </Fragment>
          );
       }
    }
    ```
 
-8. Add the components/notes/NotesPage.js component.
+## 4. <a name='routing'></a>Add Routing
+
+1. Install react-router-dom
+   
+   `npm install react-router-dom`
+
+2. Modify App.js as follows. Note the following
+   * The parent rendered element is `<Router>`
+   * Each `<Route>` will be a child of `<Switch>`
+   * The default route "/" is connected to the Home page
+
+   ```js
+   import React from 'react';
+   import {
+      BrowserRouter as Router,
+      Switch,
+      Route
+   } from 'react-router-dom';
+   import './App.css';
+   import Layout from './components/common/Layout';
+   import Home from './components/home/Home';
+
+   function App() {
+      return (
+         <Router>
+            <Layout>
+            <Switch>
+               <Route path="/">
+                  <Home />
+               </Route>
+            </Switch>
+            </Layout>
+         </Router>
+      );
+   }
+
+   export default App;
+   ```
+
+## 6. <a name='routing'></a>Add Notes Page
+
+1. Add the components/notes/NotesPage.js component.
+
    ```js
    import React, { Fragment } from 'react';
    import MainTitle from '../common/MainTitle';
@@ -198,73 +230,94 @@ json-mock-api
    }
    ```
 
-9. Add the components/notes/UpdateNotePage.js component.
-   ```js
-   import React, { Fragment } from 'react';
-   import MainTitle from '../common/MainTitle';
+2. Add a constructor to initialize the component's state. In this case, the state will contain a list of notes.
 
-   export default class UpdateNotePage extends React.Component {
-      render() {
-         return (
-            <Fragment>
-            <MainTitle>UpdateNotePage</MainTitle>
-            </Fragment>
-         );
+   ```js
+   constructor() {
+      super();
+      this.state = { notes: [] };
+   }
+   ```
+
+3. Create the api/NotesApi.js module to encapsulate getting notes from the Notes Web API. This module uses the Immediately Invoked Function Expression (IIFE) pattern.
+
+   ```js
+   var NotesApi = (function() {
+      function _getBaseUrl() {
+         return '/api/notes';
       }
-   }
+
+      function get() {
+         return fetch(_getBaseUrl())
+            .then(rsp => rsp.json());
+      }
+
+      return {
+         get: get
+      };
+   }());
+  
+   export default NotesApi;
    ```
 
-## 4. <a name='routing'></a>Add Routing
+4. Import the `NotesApi` in the `NotesPage` component.
 
-1. Install react-router-dom
-   
-   `npm install react-router-dom`
-2. Modify App.js
    ```js
-   import React from 'react';
-   import {
-   BrowserRouter as Router,
-   Switch,
-   Route
-   } from "react-router-dom";
-   import './App.css';
-   import Layout from './components/common/Layout';
-   import Home from './components/home/Home';
-   import About from './components/about/About';
-   import NotesPage from './components/notes/NotesPage';
-   import CreateNotePage from './components/notes/CreateNotePage';
-   import UpdateNotePage from './components/notes/UpdateNotePage';
-
-   function App() {
-   return (
-      <Router>
-         <Layout>
-         <Switch>
-            <Route path="/notes/create">
-               <CreateNotePage />
-            </Route>
-            <Route path="/notes/:noteId">
-               <UpdateNotePage />
-            </Route>
-            <Route path="/notes">
-               <NotesPage />
-            </Route>
-            <Route path="/about">
-               <About />
-            </Route>
-            <Route path="/">
-               <Home />
-            </Route>
-         </Switch>
-         </Layout>
-      </Router>
-   );
-   }
-
-   export default App;
+   import NotesApi from '../../api/NotesApi';
    ```
 
-## 6. <a name='routing'></a>Add Notes Page
+5. Add a `componentDidMount` method to the `NotesPage` to load notes from the Web API when the component is loaded.
+
+   ```js
+   componentDidMount() {
+      NotesApi.get()
+         .then(notes => {
+            this.setState({ notes: notes });
+         })
+         .catch(err => {
+            console.error(err);
+         });
+   }
+   ```
+
+6. Modify the `render` method to display loaded notes.
+
+   ```js
+   render() {
+      return (
+         <Fragment>
+            <MainTitle>Notes</MainTitle>
+
+            <Link to="/notes/create"><PrimaryButton>Add Note</PrimaryButton></Link>
+
+            <table className="table">
+               <thead>
+                  <tr>
+                     <th>Created</th>
+                     <th>Title</th>
+                     <th>Content</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  {
+                     this.state.notes.map(note => {
+                        return <tr key={note.id}>
+                           <td>{note.createdDate}</td>
+                           <td>
+                              <Link to={`/notes/${note.id}`}>
+                                 {note.title}
+                              </Link>
+                           </td>
+                           <td>{note.content}</td>
+                        </tr>
+                     })
+                  }
+               </tbody>
+            </table>
+         </Fragment>
+      );
+   }
+   ```
 
 ## 7. <a name='routing'></a>Add API Mock
 
