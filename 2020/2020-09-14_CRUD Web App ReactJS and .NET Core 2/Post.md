@@ -41,15 +41,15 @@ Bulma is a popular CSS styling framework. The following steps are for installing
 
 1. Create the following directory structure under the web app's src directory.
 
-```
-api
-components
-   about
-   common
-   home
-   notes
-json-mock-api
-```
+   ```
+   api
+   components
+      about
+      common
+      home
+      notes
+   json-mock-api
+   ```
 
 2. Add the components/common/Navigation.js component. This will be used as the navigation bar for the web app. It is based on bulma's responsive navigation component.
 
