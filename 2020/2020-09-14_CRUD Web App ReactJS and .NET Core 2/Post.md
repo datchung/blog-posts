@@ -14,28 +14,7 @@ Table of Contents
 
 This is a continuation from the previous part, which can be found [here](../2020-08-31_React%20Front%20End%20NET%20Core%20Back%20End/Post.md). In this part, we will set up an Entity Framework `DbContext`, create a class for our model, create a controller with CRUD actions using Entity Framework, and add Swagger API docs. The follow up post will be about adding CRUD functionality to the front end UI.
 
-## 2. <a name='packages'></a>Install Packages
-
-1. Install the following npm packages.
-    * react-router-dom, for routing in the react app
-    * json-server, for API mocking
-    * concurrently, for running multiple scripts from one command
-    
-## 3. <a name='indexcshtml'></a>Modify Build Script to Automatically Generate "index.cshtml"
-
-1. Open package.json.
-2. Edit the "scripts" section as follows
-   ```
-   "scripts": {
-      ...
-      "build": "react-scripts build && (if exist ../wwwroot rmdir \"../wwwroot\" /q /s) && (move build ../wwwroot) && (copy ..\\wwwroot\\index.html ..\\Views\\Home\\Index.cshtml /y)",
-      ...
-   },
-   ```
-   * The last part of this script will copy the built index.html to the appropriate ASP directory with the proper file name (Index.cshtml)
-   * This is a convinience improvement so that the developer doesn't have to manually copy and rename the built index.html file
-
-## 5. <a name='routing'></a>Use Bulma CSS For Styling
+## 2. <a name='routing'></a>Use Bulma CSS For Styling
 
 Bulma is a popular CSS styling framework. The following steps are for installing and using Bulma in the web app.
 
@@ -49,9 +28,9 @@ Bulma is a popular CSS styling framework. The following steps are for installing
    import 'bulma/css/bulma.css';
    ```
 
-3. Remove all existing custom styles App.css
+3. Remove all existing styles from App.css
 
-## 4. <a name='baseline'></a>Add Base Line Components
+## 3. <a name='baseline'></a>Add Base Line Components
 
 1. Create the following directory structure under the web app's src directory.
 
@@ -211,7 +190,7 @@ json-mock-api
    export default App;
    ```
 
-## 6. <a name='routing'></a>Add Notes Page
+## 5. <a name='routing'></a>Add Notes Page
 
 1. Add the components/notes/NotesPage.js component.
 
@@ -319,13 +298,76 @@ json-mock-api
    }
    ```
 
-## 7. <a name='routing'></a>Add API Mock
+7. At this point, the notes page will encounter an error if the notes Web API is not running. In the next section, we add a mock API to remove the reliance on the Web API while in development.
 
-## 8. <a name='routing'></a>Add New Note
+## 6. <a name='routing'></a>Add API Mock
 
-## 9. <a name='routing'></a>Add Update Note
+1. Install json-server to mock the Web API back end.
+   
+   `npm install json-server --save-dev`
 
-## 10. <a name='routing'></a>Add Delete Note
+2. Add the file json-mock-api/db.json. Populate the file with mock notes objects.
+
+   ```js
+   {
+      "notes": [
+         {
+            "id": 1,
+            "createdDate": "2020-09-08T02:10:10.9799513Z",
+            "title": "Note 1",
+            "content": "Content 1 here"
+         },
+         {
+            "id": 2,
+            "createdDate": "2020-09-07T02:10:10.9802279Z",
+            "title": "Note 2",
+            "content": "Content 2 here"
+         }
+      ]
+   }
+   ```
+
+3. Add the file json-mock-api/routes.json. Populate the file with the api prefix.
+
+   ```js
+   {
+      "/api/*": "/$1"
+   }
+   ```
+
+4. Add the "json-server" script to package.json.
+
+   ```js
+   ...
+   "scripts": {
+      "json-server": "node_modules\\.bin\\json-server --watch src\\json-mock-api\\db.json --routes src\\json-mock-api\\routes.json --port 5000",
+      ...
+   },
+   ...
+   ```
+
+5. Install concurrently to enable running the "start" and "json-server" scripts in parallel.
+
+   `npm install concurrently --save-dev`
+
+6. Add the "dev" script to package.json. Executing `npm run dev` will run `npm start` and `npm run json-server`.
+
+   ```js
+   ...
+   "scripts": {
+      "dev": "concurrently \"npm start\" \"npm run json-server\"",
+      ...
+   },
+   ...
+   ```
+
+7. Execute `npm run dev` and navigate to the notes page. Now, you should see the notes being loaded from the mock API.
+
+## 7. <a name='routing'></a>Add Create Note Page
+
+## 9. <a name='routing'></a>Add Update Note Page
+
+## 10. <a name='routing'></a>Add Delete Note Page
 
 ## 11. <a name='conclusion'></a>Conclusion
 
