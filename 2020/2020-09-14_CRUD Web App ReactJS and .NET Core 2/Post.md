@@ -807,8 +807,7 @@ Bulma is a popular CSS styling framework. The following steps are for installing
    ...
    ```
 
-!["delete note"](deleteNote.PNG)
-
+!["delete note"](deleteNote.PNG)  
 *Delete Note button*
 
 ## 10. <a name='conclusion'></a>Conclusion
