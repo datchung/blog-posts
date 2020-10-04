@@ -365,14 +365,181 @@ json-mock-api
 
 ## 7. <a name='routing'></a>Add Create Note Page
 
-## 9. <a name='routing'></a>Add Update Note Page
+1. Add the `create` function to api/NotesApi.js.
 
-## 10. <a name='routing'></a>Add Delete Note Page
+   ```js
+   var NotesApi = (function() {
+      ...
+      function create(note) {
+         return fetch(_getBaseUrl(), {
+            body: JSON.stringify(note),
+            headers: {
+               'content-type': 'application/json'
+            },
+            method: 'POST'
+            });
+      }
 
-## 11. <a name='conclusion'></a>Conclusion
+      return {
+         ...
+         create: create
+      };
+   }());
+  
+   export default NotesApi;
+   ```
+
+2. Add the components/notes/NoteForm.js component.
+
+   ```js
+   import React, { Fragment } from 'react';
+   import PrimaryButton from '../common/PrimaryButton';
+
+   export default class NoteForm extends React.Component {
+      constructor(props) {
+         super(props);
+      
+         this.state = {
+               id: null,
+               title: '',
+               content: '',
+               isStateInitialized: false,
+               submitted: false
+         };
+      
+         this.handleTitleChange = this.handleTitleChange.bind(this);
+         this.handleContentChange = this.handleContentChange.bind(this);
+         this.handleSubmit = this.handleSubmit.bind(this);
+      }
+
+      componentDidUpdate() {
+         if(this.state.isStateInitialized || this.props.initialState == null)
+               return;
+
+         this.setState({ isStateInitialized: true });
+         this.setState({ id: this.props.initialState.id });
+         this.setState({ title: this.props.initialState.title });
+         this.setState({ content: this.props.initialState.content });
+      }
+
+      handleTitleChange(e) {
+         this.setState({ title: e.target.value });
+      }
+
+      handleContentChange(e) {
+         this.setState({ content: e.target.value });
+      }
+
+      async handleSubmit(e) {
+         this.props.onSubmit(e, this.state);
+      }
+
+      render() {
+         return (
+               <Fragment>
+                  <form onSubmit={this.handleSubmit}>
+                     <div className="field">
+                        <label className="label">Title</label>
+                        <div className="control">
+                              <input
+                                 id="titleInput"
+                                 className="input"
+                                 type="text"
+                                 value={this.state.title}
+                                 onChange={this.handleTitleChange} />
+                        </div>
+                     </div>
+                     <div className="field">
+                        <label className="label">Content</label>
+                        <div className="control">
+                              <textarea
+                                 id="contentInput"
+                                 className="textarea"
+                                 cols="100"
+                                 rows="10"
+                                 value={this.state.content}
+                                 onChange={this.handleContentChange} />
+                        </div>
+                     </div>
+                     <div class="control">
+                        <PrimaryButton type="submit">Save Note</PrimaryButton>
+                     </div>
+                  </form>
+               </Fragment>
+         );
+      }
+   }
+   ```
+
+3. Add the components/notes/CreateNotePage.js component.
+
+   ```js
+   import React, { Fragment } from 'react';
+   import { withRouter } from 'react-router-dom';
+   import MainTitle from '../common/MainTitle';
+   import NoteForm from './NoteForm';
+   import NotesApi from '../../api/NotesApi';
+
+   class CreateNotePage extends React.Component {
+      render() {
+         return (
+            <Fragment>
+               <MainTitle>CreateNotePage</MainTitle>
+            </Fragment>
+         );
+      }
+   }
+
+   export default withRouter(CreateNotePage);
+   ```
+
+4. Add a constructor to initialize the component.
+
+   ```js
+   constructor(props) {
+      super(props);      
+      this.handleSubmit = this.handleSubmit.bind(this);
+   }
+   ```
+
+5. Add the `handleSubmit` function to make an API request to create the note.
+
+   ```js
+   async handleSubmit(e, state) {
+      e.preventDefault();
+
+      NotesApi.create(state)
+         .then(rsp => {
+            if (rsp.status === 201 || rsp.status === 204)
+               this.props.history.push('/notes');
+         })
+         .catch(err => {
+            console.error(err);
+         });
+   }
+   ```
+
+6. Modify the `render` method to display a form to create a note.
+
+   ```js
+   render() {
+      return (
+         <Fragment>
+            <MainTitle>Create Note</MainTitle>
+            <NoteForm onSubmit={this.handleSubmit} />
+         </Fragment>
+      );
+   }
+   ```
+
+## 8. <a name='routing'></a>Add Update Note Page
+
+## 9. <a name='routing'></a>Add Delete Note Page
+
+## 10. <a name='conclusion'></a>Conclusion
 
 The full example source code can be found [here](src).
 
-## 12. <a name='comments'></a>Comments
+## 11. <a name='comments'></a>Comments
 
 _Reply to [this tweet]()._

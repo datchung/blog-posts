@@ -16,9 +16,8 @@ class CreateNotePage extends React.Component {
     
         NotesApi.create(state)
         .then(rsp => {
-          if (rsp.status === 201 || rsp.status === 204) {
+          if (rsp.status === 201 || rsp.status === 204)
             this.props.history.push('/notes');
-          }
         })
         .catch(err => {
           console.error(err);
@@ -28,8 +27,8 @@ class CreateNotePage extends React.Component {
     render() {
         return (
             <Fragment>
-            <MainTitle>Create Note</MainTitle>
-            <NoteForm onSubmit={this.handleSubmit} />
+              <MainTitle>Create Note</MainTitle>
+              <NoteForm onSubmit={this.handleSubmit} />
             </Fragment>
         );
     }
