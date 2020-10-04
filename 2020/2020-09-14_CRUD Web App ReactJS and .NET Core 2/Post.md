@@ -481,34 +481,15 @@ json-mock-api
    import NotesApi from '../../api/NotesApi';
 
    class CreateNotePage extends React.Component {
-      render() {
-         return (
-            <Fragment>
-               <MainTitle>CreateNotePage</MainTitle>
-            </Fragment>
-         );
+      constructor(props) {
+         super(props);
+         this.handleSubmit = this.handleSubmit.bind(this);
       }
-   }
 
-   export default withRouter(CreateNotePage);
-   ```
-
-4. Add a constructor to initialize the component.
-
-   ```js
-   constructor(props) {
-      super(props);      
-      this.handleSubmit = this.handleSubmit.bind(this);
-   }
-   ```
-
-5. Add the `handleSubmit` function to make an API request to create the note.
-
-   ```js
-   async handleSubmit(e, state) {
-      e.preventDefault();
-
-      NotesApi.create(state)
+      async handleSubmit(e, state) {
+         e.preventDefault();
+      
+         NotesApi.create(state)
          .then(rsp => {
             if (rsp.status === 201 || rsp.status === 204)
                this.props.history.push('/notes');
@@ -516,20 +497,19 @@ json-mock-api
          .catch(err => {
             console.error(err);
          });
-   }
-   ```
+      }
 
-6. Modify the `render` method to display a form to create a note.
-
-   ```js
-   render() {
-      return (
-         <Fragment>
+      render() {
+         return (
+            <Fragment>
             <MainTitle>Create Note</MainTitle>
             <NoteForm onSubmit={this.handleSubmit} />
-         </Fragment>
-      );
+            </Fragment>
+         );
+      }
    }
+
+   export default withRouter(CreateNotePage);
    ```
 
 ## 8. <a name='routing'></a>Add Update Note Page
