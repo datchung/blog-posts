@@ -342,6 +342,8 @@ Bulma is a popular CSS styling framework. The following steps are for installing
 
 8. At this point, the notes page will encounter an error if the notes Web API is not running. In the next section, we add a mock API to remove the reliance on the Web API while in development.
 
+![notes](notes.PNG)
+
 ## 6. <a name='mock'></a>Add API Mock
 
 1. Install json-server to mock the Web API back end.
@@ -404,6 +406,8 @@ Bulma is a popular CSS styling framework. The following steps are for installing
    ```
 
 7. Execute `npm run dev` and navigate to the notes page. Now, you should see the notes being loaded from the mock API.
+
+![notes mock](notesMock.PNG)
 
 ## 7. <a name='create'></a>Add Create Note Page
 
@@ -593,6 +597,10 @@ Bulma is a popular CSS styling framework. The following steps are for installing
    export default App;
    ```
 
+![create note button](addNote.PNG)
+
+![create note form](addNote2.PNG)
+
 ## 8. <a name='update'></a>Add Update Note Page
 
 1. Add the `update` function to api/NotesApi.js.
@@ -722,6 +730,8 @@ Bulma is a popular CSS styling framework. The following steps are for installing
    export default App;
    ```
 
+![update note form](updateNote.PNG)
+
 ## 9. <a name='delete'></a>Add Delete Note Functionality
 
 1. Add the `deleteNote` function to api/NotesApi.js.
@@ -781,6 +791,8 @@ Bulma is a popular CSS styling framework. The following steps are for installing
    }
    ...
    ```
+
+![delete](deleteNote.PNG)
 
 ## 10. <a name='conclusion'></a>Conclusion
 
