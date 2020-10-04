@@ -58,7 +58,7 @@ class UpdateNotePage extends React.Component {
     render() {
         return (
           <Fragment>
-          <MainTitle>Edit Note</MainTitle>
+          <MainTitle>Update Note</MainTitle>
           <NoteForm
               onSubmit={this.handleSubmit}
               initialState={this.state.note} />

@@ -342,7 +342,10 @@ Bulma is a popular CSS styling framework. The following steps are for installing
 
 8. At this point, the notes page will encounter an error if the notes Web API is not running. In the next section, we add a mock API to remove the reliance on the Web API while in development.
 
-![notes](notes.PNG)
+<figure>
+  <img src="notes.PNG" alt="notes page"/>
+  <figcaption>The Notes page</figcaption>
+</figure>
 
 ## 6. <a name='mock'></a>Add API Mock
 
@@ -407,7 +410,10 @@ Bulma is a popular CSS styling framework. The following steps are for installing
 
 7. Execute `npm run dev` and navigate to the notes page. Now, you should see the notes being loaded from the mock API.
 
-![notes mock](notesMock.PNG)
+<figure>
+  <img src="notesMock.PNG" alt="notes page with mock"/>
+  <figcaption>The Notes page with mocked API</figcaption>
+</figure>
 
 ## 7. <a name='create'></a>Add Create Note Page
 
@@ -597,9 +603,15 @@ Bulma is a popular CSS styling framework. The following steps are for installing
    export default App;
    ```
 
-![create note button](addNote.PNG)
+<figure>
+  <img src="addNote.PNG" alt="create note button"/>
+  <figcaption>The Create Note buton</figcaption>
+</figure>
 
-![create note form](addNote2.PNG)
+<figure>
+  <img src="addNote2.PNG" alt="create note page"/>
+  <figcaption>The Create Note page</figcaption>
+</figure>
 
 ## 8. <a name='update'></a>Add Update Note Page
 
@@ -730,7 +742,10 @@ Bulma is a popular CSS styling framework. The following steps are for installing
    export default App;
    ```
 
-![update note form](updateNote.PNG)
+<figure>
+  <img src="updateNote.PNG" alt="update note"/>
+  <figcaption>The Update Note page</figcaption>
+</figure>
 
 ## 9. <a name='delete'></a>Add Delete Note Functionality
 
@@ -792,7 +807,10 @@ Bulma is a popular CSS styling framework. The following steps are for installing
    ...
    ```
 
-![delete](deleteNote.PNG)
+<figure>
+  <img src="deleteNote.PNG" alt="delete note"/>
+  <figcaption>The Delete Note button</figcaption>
+</figure>
 
 ## 10. <a name='conclusion'></a>Conclusion
 
