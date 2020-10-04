@@ -342,10 +342,9 @@ Bulma is a popular CSS styling framework. The following steps are for installing
 
 8. At this point, the notes page will encounter an error if the notes Web API is not running. In the next section, we add a mock API to remove the reliance on the Web API while in development.
 
-<figure>
-  <img src="notes.PNG" alt="notes page"/>
-  <figcaption><i>The Notes page</i></figcaption>
-</figure>
+| ![notes page](notes.PNG) | 
+|:--:| 
+| *The Notes page* |
 
 ## 6. <a name='mock'></a>Add API Mock
 
@@ -410,10 +409,9 @@ Bulma is a popular CSS styling framework. The following steps are for installing
 
 7. Execute `npm run dev` and navigate to the notes page. Now, you should see the notes being loaded from the mock API.
 
-<figure>
-  <img src="notesMock.PNG" alt="notes page with mock"/>
-  <figcaption><i>The Notes page with mocked API</i></figcaption>
-</figure>
+| ![notes page with mock](notesMock.PNG) | 
+|:--:| 
+| *The Notes page with mocked API* |
 
 ## 7. <a name='create'></a>Add Create Note Page
 
@@ -742,10 +740,9 @@ The Create Note page
    export default App;
    ```
 
-<figure>
-  <img src="updateNote.PNG" alt="update note"/>
-  <figcaption><i>The Update Note page</i></figcaption>
-</figure>
+| ![update page](updateNote.PNG) | 
+|:--:| 
+| *The Update Note page* |
 
 ## 9. <a name='delete'></a>Add Delete Note Functionality
 
@@ -807,10 +804,9 @@ The Create Note page
    ...
    ```
 
-<figure>
-  <img src="deleteNote.PNG" alt="Delete note"/>
-  <figcaption><i><i>The Delete Note button</i></i></figcaption>
-</figure>
+| ![delete note](deleteNote.PNG) | 
+|:--:| 
+| *The Delete Note button* |
 
 ## 10. <a name='conclusion'></a>Conclusion
 
