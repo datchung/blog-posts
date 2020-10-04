@@ -3,6 +3,7 @@ My blog posts written in markdown and grouped by year.
 
 # 2020
 
+* [2020-10-03 Create a ReactJS and .NET Core Web App (Part 3: CRUD Front End)](2020/2020-09-14_CRUD%20Web%20App%20ReactJS%20and%20.NET%20Core%202/Post.md)
 * [2020-09-08 Create a ReactJS and .NET Core Web App (Part 2: CRUD Web API)](2020/2020-09-07_CRUD%20Web%20App%20ReactJS%20and%20.NET%20Core/Post.md)
 * [2020-08-31 Create a ReactJS and .NET Core Web App (Part 1: Baseline Projects)](2020/2020-08-31_React%20Front%20End%20NET%20Core%20Back%20End/Post.md)
 * [2020-07-01 Connect to a SQL Server Database with an IP Address](2020/2020-07-01_Connect%20to%20SQL%20Server%20Database%20with%20an%20IP%20Address/Post.md)
