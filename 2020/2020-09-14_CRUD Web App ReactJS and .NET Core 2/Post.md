@@ -608,6 +608,7 @@ Bulma is a popular CSS styling framework. The following steps are for installing
   <figcaption><i>The Create Note buton</i></figcaption>
 </figure>
 <br/>
+
 <figure>
   <img src="addNote2.PNG" alt="create note page"/>
   <figcaption><i>The Create Note page</i></figcaption>
