@@ -344,7 +344,7 @@ Bulma is a popular CSS styling framework. The following steps are for installing
 
 <figure>
   <img src="notes.PNG" alt="notes page"/>
-  <figcaption>The Notes page</figcaption>
+  <figcaption><i>The Notes page</i></figcaption>
 </figure>
 
 ## 6. <a name='mock'></a>Add API Mock
@@ -412,7 +412,7 @@ Bulma is a popular CSS styling framework. The following steps are for installing
 
 <figure>
   <img src="notesMock.PNG" alt="notes page with mock"/>
-  <figcaption>The Notes page with mocked API</figcaption>
+  <figcaption><i>The Notes page with mocked API</i></figcaption>
 </figure>
 
 ## 7. <a name='create'></a>Add Create Note Page
@@ -605,12 +605,12 @@ Bulma is a popular CSS styling framework. The following steps are for installing
 
 <figure>
   <img src="addNote.PNG" alt="create note button"/>
-  <figcaption>The Create Note buton</figcaption>
+  <figcaption><i>The Create Note buton</i></figcaption>
 </figure>
 
 <figure>
   <img src="addNote2.PNG" alt="create note page"/>
-  <figcaption>The Create Note page</figcaption>
+  <figcaption><i>The Create Note page</i></figcaption>
 </figure>
 
 ## 8. <a name='update'></a>Add Update Note Page
@@ -744,7 +744,7 @@ Bulma is a popular CSS styling framework. The following steps are for installing
 
 <figure>
   <img src="updateNote.PNG" alt="update note"/>
-  <figcaption>The Update Note page</figcaption>
+  <figcaption><i>The Update Note page</i></figcaption>
 </figure>
 
 ## 9. <a name='delete'></a>Add Delete Note Functionality
@@ -807,8 +807,10 @@ Bulma is a popular CSS styling framework. The following steps are for installing
    ...
    ```
 
-!["delete note"](deleteNote.PNG)  
-*Delete Note button*
+<figure>
+  <img src="deleteNote.PNG" alt="Delete note"/>
+  <figcaption><i><i>The Delete Note button</i></i></figcaption>
+</figure>
 
 ## 10. <a name='conclusion'></a>Conclusion
 
