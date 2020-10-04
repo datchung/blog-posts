@@ -4,7 +4,6 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-// import logo from './logo.svg';
 import './App.css';
 import Layout from './components/common/Layout';
 import Home from './components/home/Home';

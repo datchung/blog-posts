@@ -6,15 +6,22 @@ _Tags: .NET, Back End, C#, Entity Framework, Front End, Full Stack, Javascript, 
 
 Table of Contents
 1. [Introduction](#introduction)
-2. [Install Packages](#packages)
-8. [Conclusion](#conclusion)
-5. [Comments](#comments)
+2. [Add Bulma CSS For Styling](#css)
+3. [Add Base Line Components](#baseline)
+4. [Add Routing](#routing)
+5. [Add Notes Page](#notes)
+6. [Add API Mock](#mock)
+7. [Add Create Note Page](#create)
+8. [Add Update Note Page](#update)
+9. [Add Delete Note Functionality](#delete)
+10. [Conclusion](#conclusion)
+11. [Comments](#comments)
 
 ## 1. <a name='introduction'></a>Introduction
 
-This is a continuation from the previous part, which can be found [here](../2020-08-31_React%20Front%20End%20NET%20Core%20Back%20End/Post.md). In this part, we will set up an Entity Framework `DbContext`, create a class for our model, create a controller with CRUD actions using Entity Framework, and add Swagger API docs. The follow up post will be about adding CRUD functionality to the front end UI.
+This is a continuation from the previous part, which can be found [here](../2020-09-07_CRUD%20Web%20App%20ReactJS%20and%20.NET%20Core/Post.md). This post focuses on adding CRUD functionality to the front end UI.
 
-## 2. <a name='routing'></a>Use Bulma CSS For Styling
+## 2. <a name='css'></a>Add Bulma CSS For Styling
 
 Bulma is a popular CSS styling framework. The following steps are for installing and using Bulma in the web app.
 
@@ -190,7 +197,7 @@ json-mock-api
    export default App;
    ```
 
-## 5. <a name='routing'></a>Add Notes Page
+## 5. <a name='notes'></a>Add Notes Page
 
 1. Add the components/notes/NotesPage.js component.
 
@@ -298,9 +305,44 @@ json-mock-api
    }
    ```
 
-7. At this point, the notes page will encounter an error if the notes Web API is not running. In the next section, we add a mock API to remove the reliance on the Web API while in development.
+7. Update App.js with the `NotesPage` route.
 
-## 6. <a name='routing'></a>Add API Mock
+   ```js
+   ...
+   import React from 'react';
+   import {
+      BrowserRouter as Router,
+      Switch,
+      Route
+   } from "react-router-dom";
+   import './App.css';
+   import Layout from './components/common/Layout';
+   import Home from './components/home/Home';
+   import NotesPage from './components/notes/NotesPage';
+
+   function App() {
+      return (
+         <Router>
+            <Layout>
+            <Switch>
+               <Route path="/notes">
+                  <NotesPage />
+               </Route>
+               <Route path="/">
+                  <Home />
+               </Route>
+            </Switch>
+            </Layout>
+         </Router>
+      );
+   }
+
+   export default App;
+   ```
+
+8. At this point, the notes page will encounter an error if the notes Web API is not running. In the next section, we add a mock API to remove the reliance on the Web API while in development.
+
+## 6. <a name='mock'></a>Add API Mock
 
 1. Install json-server to mock the Web API back end.
    
@@ -363,7 +405,7 @@ json-mock-api
 
 7. Execute `npm run dev` and navigate to the notes page. Now, you should see the notes being loaded from the mock API.
 
-## 7. <a name='routing'></a>Add Create Note Page
+## 7. <a name='create'></a>Add Create Note Page
 
 1. Add the `create` function to api/NotesApi.js.
 
@@ -512,9 +554,233 @@ json-mock-api
    export default withRouter(CreateNotePage);
    ```
 
-## 8. <a name='routing'></a>Add Update Note Page
+4. Update App.js with the `CreateNotePage` route.
 
-## 9. <a name='routing'></a>Add Delete Note Page
+   ```js
+   ...
+   import React from 'react';
+   import {
+      BrowserRouter as Router,
+      Switch,
+      Route
+   } from "react-router-dom";
+   import './App.css';
+   import Layout from './components/common/Layout';
+   import Home from './components/home/Home';
+   import NotesPage from './components/notes/NotesPage';
+   import CreateNotePage from './components/notes/CreateNotePage';
+
+   function App() {
+      return (
+         <Router>
+            <Layout>
+            <Switch>
+               <Route path="/notes/create">
+                  <CreateNotePage />
+               </Route>
+               <Route path="/notes">
+                  <NotesPage />
+               </Route>
+               <Route path="/">
+                  <Home />
+               </Route>
+            </Switch>
+            </Layout>
+         </Router>
+      );
+   }
+
+   export default App;
+   ```
+
+## 8. <a name='update'></a>Add Update Note Page
+
+1. Add the `update` function to api/NotesApi.js.
+
+   ```js
+   var NotesApi = (function() {
+      ...
+      function update(note) {
+         return fetch(`${_getBaseUrl()}/${note.id}`, {
+            body: JSON.stringify(note),
+            headers: {
+               'content-type': 'application/json'
+            },
+            method: 'PUT'
+          })
+      }
+
+      return {
+         ...
+         update: update
+      };
+   }());
+  
+   export default NotesApi;
+   ```
+
+2. Add the components/notes/UpdateNotePage.js component.
+
+   ```js
+   import React, { Fragment } from 'react';
+   import { withRouter } from 'react-router-dom';
+   import MainTitle from '../common/MainTitle';
+   import NoteForm from './NoteForm';
+   import NotesApi from '../../api/NotesApi';
+
+   class UpdateNotePage extends React.Component {
+      constructor(props) {
+         super(props);
+         
+         this.state = {
+            note: null
+         };
+
+         this.handleSubmit = this.handleSubmit.bind(this);
+      }
+
+      componentDidMount() {
+         fetch(`/api/notes/${this.props.match.params.noteId}`)
+            .then(rsp => rsp.json())
+            .then(note => {
+               this.setState({ note: note });
+            })
+            .catch(err => {
+               console.error(err);
+            });
+      }
+
+      async handleSubmit(e, state) {
+         e.preventDefault();
+      
+         NotesApi.update(state)
+         .then(rsp => {
+            if (rsp.status === 200) {
+               this.props.history.push('/notes');
+            }
+         })
+         .catch(err => {
+            console.error(err);
+         });
+      }
+
+      render() {
+         return (
+            <Fragment>
+               <MainTitle>Edit Note</MainTitle>
+               <NoteForm
+                  onSubmit={this.handleSubmit}
+                  initialState={this.state.note} />
+            </Fragment>
+         );
+      }
+   }
+
+   export default withRouter(UpdateNotePage);
+   ```
+
+4. Update App.js with the `UpdateNotePage` route.
+
+   ```js
+   ...
+   import React from 'react';
+   import {
+      BrowserRouter as Router,
+      Switch,
+      Route
+   } from "react-router-dom";
+   import './App.css';
+   import Layout from './components/common/Layout';
+   import Home from './components/home/Home';
+   import NotesPage from './components/notes/NotesPage';
+   import CreateNotePage from './components/notes/CreateNotePage';
+   import UpdateNotePage from './components/notes/UpdateNotePage';
+
+   function App() {
+      return (
+         <Router>
+            <Layout>
+            <Switch>
+               <Route path="/notes/create">
+                  <CreateNotePage />
+               </Route>
+               <Route path="/notes/:noteId">
+                  <UpdateNotePage />
+               </Route>
+               <Route path="/notes">
+                  <NotesPage />
+               </Route>
+               <Route path="/">
+                  <Home />
+               </Route>
+            </Switch>
+            </Layout>
+         </Router>
+      );
+   }
+
+   export default App;
+   ```
+
+## 9. <a name='delete'></a>Add Delete Note Functionality
+
+1. Add the `deleteNote` function to api/NotesApi.js.
+
+   ```js
+   var NotesApi = (function() {
+      ...
+      function deleteNote(id) {
+         return fetch(`${_getBaseUrl()}/${id}`, {
+            method: 'DELETE'
+         });
+      }
+
+      return {
+         ...
+         deleteNote: deleteNote
+      };
+   }());
+  
+   export default NotesApi;
+   ```
+
+2. Add the delete functionality to components/notes/UpdateNotePage.js.
+
+   ```js
+   ...
+   constructor(props) {
+      ...
+      this.handleDelete = this.handleDelete.bind(this);
+   }
+   ...
+   async handleDelete(e) {
+      e.preventDefault();
+
+      NotesApi.deleteNote(this.state.note.id)
+         .then(rsp => {
+            if (rsp.status === 200) {
+            this.props.history.push('/notes');
+            }
+         })
+         .catch(err => {
+            console.error(err);
+         });
+   }
+   ...
+   render() {
+      return (
+         <Fragment>
+            ...
+            <button 
+               className="button is-light mt-5"
+               onClick={this.handleDelete}>
+               Delete Note
+            </button>
+         </Fragment>
+      );
+   }
+   ...
+   ```
 
 ## 10. <a name='conclusion'></a>Conclusion
 
