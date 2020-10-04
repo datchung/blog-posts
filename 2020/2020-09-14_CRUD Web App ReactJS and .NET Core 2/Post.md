@@ -602,12 +602,20 @@ Bulma is a popular CSS styling framework. The following steps are for installing
 
    export default App;
    ```
-   
-![create note button](addNote.PNG)
-*The Create Note button*
 
-![create note page](addNote2.PNG)
-*The Create Note page*
+<p>
+<figure>
+  <img src="addNote.PNG" alt="create note button"/>
+  <figcaption><i>The Create Note button</i></figcaption>
+</figure>
+</p>
+
+<p>
+<figure>
+  <img src="addNote2.PNG" alt="create note page"/>
+  <figcaption><i>The Create Note page</i></figcaption>
+</figure>
+</p>
 
 ## 8. <a name='update'></a>Add Update Note Page
 
