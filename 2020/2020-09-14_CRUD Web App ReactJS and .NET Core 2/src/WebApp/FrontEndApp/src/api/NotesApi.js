@@ -1,8 +1,8 @@
-var NotesApi = (function() {
+var NotesApi = (function () {
     function _getBaseUrl() {
         return '/api/notes';
     }
-  
+
     function create(note) {
         return fetch(_getBaseUrl(), {
             body: JSON.stringify(note),
@@ -11,7 +11,7 @@ var NotesApi = (function() {
                 'content-type': 'application/json'
             },
             method: 'POST'
-          });
+        });
     }
 
     function get() {
@@ -27,7 +27,7 @@ var NotesApi = (function() {
                 'content-type': 'application/json'
             },
             method: 'PUT'
-          })
+        })
     }
 
     function deleteNote(id) {
@@ -35,13 +35,13 @@ var NotesApi = (function() {
             method: 'DELETE'
         });
     }
-  
+
     return {
         create: create,
         get: get,
         update: update,
         deleteNote: deleteNote
     };
-  }());
-  
-  export default NotesApi;
+}());
+
+export default NotesApi;

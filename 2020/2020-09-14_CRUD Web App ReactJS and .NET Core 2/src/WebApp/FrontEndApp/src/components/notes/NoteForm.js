@@ -4,7 +4,7 @@ import PrimaryButton from '../common/PrimaryButton';
 export default class NoteForm extends React.Component {
     constructor(props) {
         super(props);
-    
+
         this.state = {
             id: null,
             title: '',
@@ -12,14 +12,14 @@ export default class NoteForm extends React.Component {
             isStateInitialized: false,
             submitted: false
         };
-    
+
         this.handleTitleChange = this.handleTitleChange.bind(this);
         this.handleContentChange = this.handleContentChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidUpdate() {
-        if(this.state.isStateInitialized || this.props.initialState == null)
+        if (this.state.isStateInitialized || this.props.initialState == null)
             return;
 
         this.setState({ isStateInitialized: true });
@@ -43,34 +43,34 @@ export default class NoteForm extends React.Component {
     render() {
         return (
             <Fragment>
-            <form onSubmit={this.handleSubmit}>
-            <div className="field">
-                    <label className="label">Title</label>
-                    <div className="control">
-                        <input
-                            id="titleInput"
-                            className="input"
-                            type="text"
-                            value={this.state.title}
-                            onChange={this.handleTitleChange} />
+                <form onSubmit={this.handleSubmit}>
+                    <div className="field">
+                        <label className="label">Title</label>
+                        <div className="control">
+                            <input
+                                id="titleInput"
+                                className="input"
+                                type="text"
+                                value={this.state.title}
+                                onChange={this.handleTitleChange} />
+                        </div>
                     </div>
-                </div>
-                <div className="field">
-                    <label className="label">Content</label>
-                    <div className="control">
-                        <textarea
-                            id="contentInput"
-                            className="textarea"
-                            cols="100"
-                            rows="10"
-                            value={this.state.content}
-                            onChange={this.handleContentChange} />
+                    <div className="field">
+                        <label className="label">Content</label>
+                        <div className="control">
+                            <textarea
+                                id="contentInput"
+                                className="textarea"
+                                cols="100"
+                                rows="10"
+                                value={this.state.content}
+                                onChange={this.handleContentChange} />
+                        </div>
                     </div>
-                </div>
-                <div class="control">
-                    <PrimaryButton type="submit">Save Note</PrimaryButton>
-                </div>
-            </form>
+                    <div class="control">
+                        <PrimaryButton type="submit">Save Note</PrimaryButton>
+                    </div>
+                </form>
             </Fragment>
         );
     }

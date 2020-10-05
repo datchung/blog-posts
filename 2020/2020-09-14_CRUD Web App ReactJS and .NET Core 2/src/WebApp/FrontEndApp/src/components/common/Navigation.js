@@ -5,7 +5,7 @@ export default class Navigation extends React.Component {
   toggleBurgerMenu() {
     document.querySelector('.navbar-menu').classList.toggle('is-active');
   }
-  
+
   render() {
     return (
       <nav className="navbar has-background-light" role="navigation" aria-label="main navigation">

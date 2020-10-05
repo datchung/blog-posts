@@ -5,71 +5,71 @@ import NoteForm from './NoteForm';
 import NotesApi from '../../api/NotesApi';
 
 class UpdateNotePage extends React.Component {
-    constructor(props) {
-        super(props);
-        
-        this.state = {
-            note: null
-        };
+  constructor(props) {
+    super(props);
 
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleDelete = this.handleDelete.bind(this);
-    }
+    this.state = {
+      note: null
+    };
 
-    componentDidMount() {
-        fetch(`/api/notes/${this.props.match.params.noteId}`)
-          .then(rsp => rsp.json())
-          .then(note => {
-            this.setState({ note: note });
-          })
-          .catch(err => {
-            console.error(err);
-          });
-    }
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+  }
 
-    async handleSubmit(e, state) {
-        e.preventDefault();
-    
-        NotesApi.update(state)
-        .then(rsp => {
-          if (rsp.status === 200) {
-            this.props.history.push('/notes');
-          }
-        })
-        .catch(err => {
-          console.error(err);
-        });
-    }
+  componentDidMount() {
+    fetch(`/api/notes/${this.props.match.params.noteId}`)
+      .then(rsp => rsp.json())
+      .then(note => {
+        this.setState({ note: note });
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
 
-    async handleDelete(e) {
-        e.preventDefault();
-    
-        NotesApi.deleteNote(this.state.note.id)
-        .then(rsp => {
-          if (rsp.status === 200) {
-            this.props.history.push('/notes');
-          }
-        })
-        .catch(err => {
-          console.error(err);
-        });
-    }
+  async handleSubmit(e, state) {
+    e.preventDefault();
 
-    render() {
-        return (
-          <Fragment>
-          <MainTitle>Update Note</MainTitle>
-          <NoteForm
-              onSubmit={this.handleSubmit}
-              initialState={this.state.note} />
-          <button 
-            className="button is-light mt-5"
-            onClick={this.handleDelete}>
-            Delete Note
+    NotesApi.update(state)
+      .then(rsp => {
+        if (rsp.status === 200) {
+          this.props.history.push('/notes');
+        }
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
+
+  async handleDelete(e) {
+    e.preventDefault();
+
+    NotesApi.deleteNote(this.state.note.id)
+      .then(rsp => {
+        if (rsp.status === 200) {
+          this.props.history.push('/notes');
+        }
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
+
+  render() {
+    return (
+      <Fragment>
+        <MainTitle>Update Note</MainTitle>
+        <NoteForm
+          onSubmit={this.handleSubmit}
+          initialState={this.state.note} />
+        <button
+          className="button is-light mt-5"
+          onClick={this.handleDelete}>
+          Delete Note
           </button>
-          </Fragment>
-        );
-    }
+      </Fragment>
+    );
+  }
 }
 
 export default withRouter(UpdateNotePage);

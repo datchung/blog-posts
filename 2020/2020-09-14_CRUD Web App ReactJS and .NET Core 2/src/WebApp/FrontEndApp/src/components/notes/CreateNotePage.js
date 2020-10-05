@@ -5,33 +5,33 @@ import NoteForm from './NoteForm';
 import NotesApi from '../../api/NotesApi';
 
 class CreateNotePage extends React.Component {
-    constructor(props) {
-        super(props);
-        
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
+  constructor(props) {
+    super(props);
 
-    async handleSubmit(e, state) {
-        e.preventDefault();
-    
-        NotesApi.create(state)
-        .then(rsp => {
-          if (rsp.status === 201 || rsp.status === 204)
-            this.props.history.push('/notes');
-        })
-        .catch(err => {
-          console.error(err);
-        });
-    }
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-    render() {
-        return (
-            <Fragment>
-              <MainTitle>Create Note</MainTitle>
-              <NoteForm onSubmit={this.handleSubmit} />
-            </Fragment>
-        );
-    }
+  async handleSubmit(e, state) {
+    e.preventDefault();
+
+    NotesApi.create(state)
+      .then(rsp => {
+        if (rsp.status === 201 || rsp.status === 204)
+          this.props.history.push('/notes');
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
+
+  render() {
+    return (
+      <Fragment>
+        <MainTitle>Create Note</MainTitle>
+        <NoteForm onSubmit={this.handleSubmit} />
+      </Fragment>
+    );
+  }
 }
 
 export default withRouter(CreateNotePage);
