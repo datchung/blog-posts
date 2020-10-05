@@ -381,7 +381,15 @@ Bulma is a popular CSS styling framework. The following steps are for installing
    }
    ```
 
-4. Add the "json-server" script to package.json.
+4. Add "proxy" to package.json.
+
+   ```js
+   ...
+   "proxy": "http://localhost:5000",
+   ...
+   ```
+
+5. Add the "json-server" script to package.json.
 
    ```js
    ...
@@ -392,11 +400,11 @@ Bulma is a popular CSS styling framework. The following steps are for installing
    ...
    ```
 
-5. Install concurrently to enable running the "start" and "json-server" scripts in parallel.
+6. Install concurrently to enable running the "start" and "json-server" scripts in parallel.
 
    `npm install concurrently --save-dev`
 
-6. Add the "dev" script to package.json. Executing `npm run dev` will run `npm start` and `npm run json-server`.
+7. Add the "dev" script to package.json. Executing `npm run dev` will run `npm start` and `npm run json-server`.
 
    ```js
    ...
@@ -407,7 +415,7 @@ Bulma is a popular CSS styling framework. The following steps are for installing
    ...
    ```
 
-7. Execute `npm run dev` and navigate to the notes page. Now, you should see the notes being loaded from the mock API.
+8. Execute `npm run dev` and navigate to the notes page. Now, you should see the notes being loaded from the mock API.
 
 | ![notes page with mock](notesMock.PNG) | 
 |:--:| 
