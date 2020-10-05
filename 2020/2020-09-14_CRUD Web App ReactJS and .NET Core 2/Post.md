@@ -308,7 +308,6 @@ Bulma is a popular CSS styling framework. The following steps are for installing
 7. Update App.js with the `NotesPage` route.
 
    ```js
-   ...
    import React from 'react';
    import {
       BrowserRouter as Router,
@@ -573,7 +572,6 @@ Bulma is a popular CSS styling framework. The following steps are for installing
 4. Update App.js with the `CreateNotePage` route.
 
    ```js
-   ...
    import React from 'react';
    import {
       BrowserRouter as Router,
@@ -708,7 +706,6 @@ The Create Note page
 4. Update App.js with the `UpdateNotePage` route.
 
    ```js
-   ...
    import React from 'react';
    import {
       BrowserRouter as Router,
