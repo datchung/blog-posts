@@ -17,7 +17,7 @@ Table of Contents
 
 ["Developing Your Leadership Philosophy"](https://www.linkedin.com/learning-login/share?forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fdeveloping-your-leadership-philosophy%3Ftrk%3Dshare_ent_url&account=86125970) is a LinkedIn Learning course by Mike Figliuolo. This course is centered around the "Maxims Method" as a means to articulate your leadership philosophy.
 
-## 2. <a name='exploring'></a>Exploring Your Leadership Style
+## 2. <a name='exploring'>Exploring Your Leadership Style</a>
 
 ## 3. <a name='yourself'>Leading Yourself</a>
 
