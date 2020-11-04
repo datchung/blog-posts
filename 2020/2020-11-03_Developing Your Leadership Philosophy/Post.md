@@ -51,11 +51,20 @@ Your team is watching your behaviour. Maxims act as your conscience to ensure ap
 
 ## 3. <a name='yourself'>Lead Yourself</a>
 
+How can you hold yourself accountable to your own standards?
+
+
 ## 4. <a name='thinking'>Lead the Thinking</a>
+
+> Develop a Vision
 
 ## 5. <a name='people'>Lead Your People</a>
 
+> Understand your team's reality by getting dirty.
+
 ## 6. <a name='life'>Lead a Balanced Life</a>
+
+> Work/Work balance
 
 ## 7. <a name='comments'></a>Comments
 
