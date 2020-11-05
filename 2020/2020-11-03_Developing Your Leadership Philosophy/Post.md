@@ -51,14 +51,19 @@ Your team is watching your behaviour. Maxims act as your conscience to ensure ap
 
 ## 3. <a name='yourself'>Lead Yourself</a>
 
-How can you hold yourself accountable to your own standards?
+Create maxims to
+* Hold yourself accountable to your own standards
+* Set standards for your role(s) and behaviours
 
+Keep track of and document your triggers.
 
 ## 4. <a name='thinking'>Lead the Thinking</a>
 
 > Develop a Vision
 
 ## 5. <a name='people'>Lead Your People</a>
+
+Develop maxims to drive team behaviour
 
 > Understand your team's reality by getting dirty.
 
