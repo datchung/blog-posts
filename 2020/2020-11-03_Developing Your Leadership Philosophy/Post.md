@@ -18,7 +18,7 @@ Table of Contents
 
 ["Developing Your Leadership Philosophy"](https://www.linkedin.com/learning-login/share?forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fdeveloping-your-leadership-philosophy%3Ftrk%3Dshare_ent_url&account=86125970) is a LinkedIn Learning course by Mike Figliuolo. This course is centered around the "Maxims Method" as a means to articulate your leadership philosophy.
 
-## 2. <a name='explore'>Explore Your Leadership Style</a>
+## 2. <a name='explore'></a>Explore Your Leadership Style
 
 ### What is a Maxim?
 
@@ -50,7 +50,7 @@ Some questions to ask to help determine your maxims
 
 Your team is watching your behaviour. Maxims act as your conscience to ensure appropriate behaviour.
 
-## 3. <a name='yourself'>Lead Yourself</a>
+## 3. <a name='yourself'></a>Lead Yourself
 
 Create maxims to
 * Hold yourself accountable to your own standards
@@ -58,7 +58,7 @@ Create maxims to
 
 Keep track of and document your triggers.
 
-## 4. <a name='thinking'>Lead the Thinking</a>
+## 4. <a name='thinking'></a>Lead the Thinking
 
 ### How to Develop a Vision
 
@@ -82,13 +82,13 @@ Use maxims to articulate your vision and leadership style
 4. That trigger becomes one of your maxims
 5. That maxim will drive your behaviour
 
-## 5. <a name='people'>Lead Your People</a>
+## 5. <a name='people'></a>Lead Your People
 
 Develop maxims to drive team behaviour
 
 > Understand your team's reality by getting dirty.
 
-## 6. <a name='life'>Lead a Balanced Life</a>
+## 6. <a name='life'></a>Lead a Balanced Life
 
 > Work/Work balance
 
