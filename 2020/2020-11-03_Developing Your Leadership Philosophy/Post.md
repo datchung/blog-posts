@@ -11,7 +11,8 @@ Table of Contents
 4. [Lead the Thinking](#thinking)
 5. [Lead Your People](#people)
 6. [Lead a Balanced Life](#life)
-7. [Comments](#comments)
+7. [Conclusion](#conclusion)
+8. [Comments](#comments)
 
 ## 1. <a name='introduction'></a>Introduction
 
@@ -59,7 +60,27 @@ Keep track of and document your triggers.
 
 ## 4. <a name='thinking'>Lead the Thinking</a>
 
-> Develop a Vision
+### How to Develop a Vision
+
+* Ask "what is the team's purpose?"
+* Make the vision compelling
+* Use simple words
+* Ask your team for input
+* Ask "why" continuously to gain insights
+  * "The five whys": there will be an insight after the fifth why
+* Question your conclusions
+
+Remember that thoughts are nice but actions matter
+
+Use maxims to articulate your vision and leadership style
+
+### How Do You Want to Behave?
+
+1. When did a leader know something important about you?
+2. How did it make you feel?
+3. Create a trigger that reminds you of that event and feeling
+4. That trigger becomes one of your maxims
+5. That maxim will drive your behaviour
 
 ## 5. <a name='people'>Lead Your People</a>
 
@@ -70,6 +91,8 @@ Develop maxims to drive team behaviour
 ## 6. <a name='life'>Lead a Balanced Life</a>
 
 > Work/Work balance
+
+## 7. <a name='conclusion'></a>Conclusion
 
 ## 7. <a name='comments'></a>Comments
 
