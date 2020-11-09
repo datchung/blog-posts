@@ -60,7 +60,7 @@ Keep track of and document your triggers.
 
 ## 4. <a name='thinking'></a>Lead the Thinking
 
-### How to Develop a Vision
+### Develop a Vision
 
 * Ask "what is the team's purpose?"
 * Make the vision compelling
@@ -86,13 +86,50 @@ Use maxims to articulate your vision and leadership style
 
 Develop maxims to drive team behaviour
 
-> Understand your team's reality by getting dirty.
+Understand your team's reality by getting dirty.
+Getting dirty = getting respect
+How are you going to stay connected with your team's reality?
+Demonstrate you are not above doing what you ask them to do
+Great leaders build more leaders
+Great leaders create opportunities for others to grow
 
 ## 6. <a name='life'></a>Lead a Balanced Life
 
-> Work/Work balance
+Work/Work balance
+Improper balance decreases performance and shortens your life
+You can't lead if you're dead
+Maxim to help maintain balance
+Balance work and life goals
+Leaders maintain perspective
+When stressed, we need to take a breath, regain perspective and find a solution
+Find ways to enjoy yourself at work
+How will you keep things in perspective?
+Think about situations with positive outcomes
+Work is just a means to an end
+What is really important to you?
+What are you really passionate about?
+If money wasn't an issue, what would you do with your time?
 
 ## 7. <a name='conclusion'></a>Conclusion
+
+Share your leadership philosophy:
+1. Let people know what you're doing and why
+2. Share your maxims
+3. Provide your maxims in writing
+
+Obstacles
+* Lack of emotional connection
+* Lack of application
+* Letting maxims get stale
+
+Re-evaluate your maxims regularly
+Put your maxims where you can see them
+Make your maxims part of your daily routine
+
+Next Steps
+* Dccument your maxims
+* Share them with others
+* Make sure the maxims are internally consistent
 
 ## 7. <a name='comments'></a>Comments
 
