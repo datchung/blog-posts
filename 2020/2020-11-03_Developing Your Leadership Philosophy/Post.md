@@ -60,7 +60,7 @@ Keep track of and document your triggers.
 
 ## 4. <a name='thinking'></a>Lead the Thinking
 
-### Develop a Vision
+### How to Develop a Vision
 
 * Ask "what is the team's purpose?"
 * Make the vision compelling
@@ -84,14 +84,18 @@ Use maxims to articulate your vision and leadership style
 
 ## 5. <a name='people'></a>Lead Your People
 
-Develop maxims to drive team behaviour
+Develop maxims to drive team behaviour.
 
-Understand your team's reality by getting dirty.
-Getting dirty = getting respect
-How are you going to stay connected with your team's reality?
-Demonstrate you are not above doing what you ask them to do
-Great leaders build more leaders
-Great leaders create opportunities for others to grow
+### How Can You Understand Your Team's Reality?
+
+* Understand by getting dirty
+* Getting dirty = getting respect
+* Show you are not above doing what you ask them to do
+
+### Great leaders
+
+* Build more leaders
+* Create opportunities for others to grow
 
 ## 6. <a name='life'></a>Lead a Balanced Life
 
