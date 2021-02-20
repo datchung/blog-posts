@@ -29,18 +29,31 @@ Table of Contents
   * Queries to get data
   * Mutations to add new or modify existing data
   * Subscriptions to subscribe to data events via a "push" mechanism
-* Use the GraphiQL interface to perform GraphQL requests
+* Use the GraphiQL (pronounced "graphical") interface to perform GraphQL requests
 
 ## 2. <a name='new-project'></a>Creating a New GraphQL Project
 
-1. Create an ASP.NET Core web app project
-2. Add static GraphiQL (pronounced "graphical") files
-3. 
+1. Create an ASP web app/server project
+2. Add static GraphiQL files
+3. Create class library for Orders (to keep projects separate)
+4. Install nuget packages on Orders project
+  * GraphQL
+  * System.Reactive
+5. Install nuget packages on Server project
+  * Microsoft.AspNetCore.StaticFiles
+  * GraphQL.Server.Transports.WebSockets
+  * System.Reactive
+6. Update Startup.cs to host static files
+
+| ![Solution Structure](NewProject.PNG) | 
+|:--:| 
+| *New solution structure* |
 
 ## 3. <a name='new-api'></a>Exposing a New GraphQL API
 
-## 4. <a name='mutations'></a>Allowing Updates THrough Mutations
 
+
+## 4. <a name='mutations'></a>Allowing Updates THrough Mutations
 
 ## 5. <a name='subscribe'></a>Enabling CLients to Subscribe to Notifications
 
