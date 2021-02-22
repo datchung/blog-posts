@@ -17,67 +17,34 @@ Table of Contents
 
 ["API Development in .NET with GraphQL"](https://www.linkedin.com/learning/api-development-in-dot-net-with-graphql/welcome) is a LinkedIn Learning course by Glenn Block. This course is an introduction to API Development in .NET with GraphQL.
 
-### What is GraphQL.NET?
+## 2. <a name=''></a>What is GraphQL.NET?
 
 * Open source library for building a GraphQL server
 * Stand up GraphQL endpoint for queries, mutations and subscriptions
 * Supports .NET Framework and Core
 
-## Course Goals
+## 3. <a name='new-api'></a>Course Goals
 
-* Create a GraphSQL server that supports
+* Create a GraphQL server that supports:
   * Queries to get data
-  * Mutations to add new or modify existing data
+  * Mutations to add or modify data
   * Subscriptions to subscribe to data events via a "push" mechanism
-* Use the GraphiQL (pronounced "graphical") interface to perform GraphQL requests
+* Use the GraphiQL (pronounced "graphical") interface to perform GraphQL requests and serve API documentation
 
-## 2. <a name='new-project'></a>Creating a New GraphQL Project
-
-1. Create an ASP web app/server project
-2. Add static GraphiQL files
-3. Create class library for Orders (to keep projects separate)
-4. Install nuget packages on Orders project
-  * GraphQL
-  * System.Reactive
-5. Install nuget packages on Server project
-  * Microsoft.AspNetCore.StaticFiles
-  * GraphQL.Server.Transports.WebSockets
-  * System.Reactive
-6. Update Startup.cs to host static files
-
-| ![Solution Structure](NewProject.PNG) | 
-|:--:| 
-| *New solution structure* |
-
-## 3. <a name='new-api'></a>Exposing a New GraphQL API
+## Queries
 
 
 
-## 4. <a name='mutations'></a>Allowing Updates THrough Mutations
+## Mutations
 
-## 5. <a name='subscribe'></a>Enabling CLients to Subscribe to Notifications
-
+## Subscriptions
 
 ## 6. <a name='conclusion'></a>Conclusion
 
-Share your leadership philosophy:
-1. Let people know what you're doing and why
-2. Share your maxims
-3. Provide your maxims in writing
+Authentication and authorization
+Websockets performance
+HTTP request equivalent
 
-Obstacles
-* Lack of emotional connection
-* Lack of application
-* Letting maxims get stale
-
-Re-evaluate your maxims regularly
-Put your maxims where you can see them
-Make your maxims part of your daily routine
-
-Next Steps
-* Dccument your maxims
-* Share them with others
-* Make sure the maxims are internally consistent
 
 ## 7. <a name='comments'></a>Comments
 
