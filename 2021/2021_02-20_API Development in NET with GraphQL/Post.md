@@ -75,4 +75,4 @@ This course is a practical introduction to GraphQL with real examples. Here are 
 
 ## 9. <a name='comments'></a>Comments
 
-_Reply to [this tweet]()._
+_Reply to [this tweet](https://twitter.com/innochi_mob/status/1364745891521974277)._
