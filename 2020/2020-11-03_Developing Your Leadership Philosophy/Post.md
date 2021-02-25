@@ -137,4 +137,4 @@ Next Steps
 
 ## 7. <a name='comments'></a>Comments
 
-_Reply to [this tweet]()._
+_Reply to [this tweet](https://twitter.com/innochi_mob/status/1364747341593534466)._
