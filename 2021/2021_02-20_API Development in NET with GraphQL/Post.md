@@ -49,11 +49,15 @@ Below is an example query in GraphiQL. The query specifies what type of data and
 
 ## 6. <a name='mutations'></a>Mutations
 
+Below is an example mutation in GraphiQL to create a record (an order) and update a record (start an order). `$order` is a variable with its value specified in the Query Variables window.
+
 | ![Mutations in GraphiQL](Mutations.png) | 
 |:--:| 
 | *Mutations in GraphiQL* |
 
 ## 7. <a name='subscriptions'></a>Subscriptions
+
+Below is an example subscription in GraphiQL. Clients that subscribe to a pre-defined will get a push notification when the event occurs. In this case, one client (upper right window) subscribes to the order created event. Another client (lower right window) subscribes to the order started event. When a subscribed event occurs, the event details will show up in the window that says "Your subscription data will appear here after server publication!".
 
 | ![Subscriptions in GraphiQL](Subscriptions.png) | 
 |:--:| 
@@ -61,10 +65,11 @@ Below is an example query in GraphiQL. The query specifies what type of data and
 
 ## 8. <a name='conclusion'></a>Conclusion
 
-Authentication and authorization
-Websockets performance (how many, etc)
-HTTP request equivalent
-Usage with SPA frameworks (eg. Reactjs)
+This course is a practical introduction to GraphQL with real examples. Here are some related topics to dig in deeper:
+* Authentication and authorization
+* Subscription performance (eg. how do connections scale, etc)
+* HTTP request equivalent of GraphQL queries
+* Usage with SPA frameworks (eg. Reactjs)
 
 ## 9. <a name='comments'></a>Comments
 
