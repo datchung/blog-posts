@@ -1,6 +1,10 @@
 # blog-posts
 My blog posts written in markdown and grouped by year.
 
+# 2021
+
+* [2021-02-20 API Development in NET with GraphQL](2021/2021-02-20_API%20Development%20in%20NET%20with%20GraphQL/Post.md)
+
 # 2020
 
 * [2020-10-03 Create a ReactJS and .NET Core Web App (Part 3: CRUD Front End)](2020/2020-09-14_CRUD%20Web%20App%20ReactJS%20and%20.NET%20Core%202/Post.md)
