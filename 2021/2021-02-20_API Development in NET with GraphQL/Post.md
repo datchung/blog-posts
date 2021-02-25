@@ -17,21 +17,20 @@ Table of Contents
 
 ## 1. <a name='intro'></a>Introduction
 
-["API Development in .NET with GraphQL"](https://www.linkedin.com/learning/api-development-in-dot-net-with-graphql/welcome) is a LinkedIn Learning course by Glenn Block. This course is an introduction to API Development in .NET with GraphQL.
+["API Development in .NET with GraphQL"](https://www.linkedin.com/learning/api-development-in-dot-net-with-graphql/welcome) is a LinkedIn Learning course by Glenn Block that introduces API Development in .NET with GraphQL.
 
 ## 2. <a name='what'></a>What is GraphQL.NET?
 
-* Open source library for building a GraphQL server
-* Stand up GraphQL endpoint for queries, mutations and subscriptions
-* Supports .NET Framework and Core
+GraphQL.NET is an open source library for building a GraphQL server. A client can perform queries, mutations and subscriptions to a GraphQL endpoint. This library supports .NET Framework (.NET Standard) and .NET Core.
 
 ## 3. <a name='goals'></a>Course Goals
 
-* Use the GraphiQL (pronounced "graphical") interface to perform GraphQL requests and serve API documentation
-* Create a GraphQL server that supports:
-  * Queries to get data
-  * Mutations to add or modify data
-  * Subscriptions to subscribe to data events via a "push" mechanism
+Learn how to use GraphiQL (pronounced "graphical"), an interface that can execute GraphQL requests and serve API documentation.
+
+Create a GraphQL server that supports:
+* Queries to get data
+* Mutations to add or modify data
+* Subscriptions to subscribe to data events via a "push" mechanism
 
 ## 4. <a name='GraphiQL'></a>GraphiQL
 
