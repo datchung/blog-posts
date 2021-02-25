@@ -36,9 +36,9 @@ Create a GraphQL server that supports:
 
 GraphiQL is a browser-based editor to execute queries and mutations against a GraphQL API server. GraphiQL also hosts API documentation.
 
-| ![API Documentation in GraphiQL](Docs.png) | 
+| ![GraphiQL Editor and Docs](Docs.png) | 
 |:--:| 
-| *API Documentation in GraphiQL* |
+| *GraphiQL Editor and Docs* |
 
 ## 5. <a name='queries'></a>Queries
 
@@ -66,7 +66,7 @@ Below is an example subscription in GraphiQL. Clients that subscribe to a pre-de
 
 ## 8. <a name='conclusion'></a>Conclusion
 
-This course is a practical introduction to GraphQL with real examples. Here are some related topics to dig in deeper:
+This course is a practical introduction to GraphQL with real examples. Here are some related topics further research:
 * Authentication and authorization
 * Subscription performance (eg. how do connections scale, etc)
 * HTTP request equivalent of GraphQL queries
