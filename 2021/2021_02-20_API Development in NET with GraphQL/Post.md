@@ -8,10 +8,12 @@ Table of Contents
 1. [Introduction](#intro)
 2. [What is GraphQL.NET?](#what)
 3. [Course Goals](#goals)
-4. [Allowing Updates Through Mutations](#mutations)
-5. [Enabling CLients to Subscribe to Notifications](#subscribe)
-7. [Conclusion](#conclusion)
-8. [Comments](#comments)
+4. [GraphiQL](#GraphiQL)
+5. [Queries](#queries)
+6. [Mutations](#mutations)
+7. [Subscriptions](#subscriptions)
+8. [Conclusion](#conclusion)
+9. [Comments](#comments)
 
 ## 1. <a name='intro'></a>Introduction
 
