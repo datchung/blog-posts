@@ -7,6 +7,7 @@ My blog posts written in markdown and grouped by year.
 
 # 2020
 
+* [2020-11-03_Developing Your Leadership Philosophy](2020/2020-11-03_Developing%20Your%20Leadership%20Philosophy/Post.md)
 * [2020-10-03 Create a ReactJS and .NET Core Web App (Part 3: CRUD Front End)](2020/2020-09-14_CRUD%20Web%20App%20ReactJS%20and%20.NET%20Core%202/Post.md)
 * [2020-09-08 Create a ReactJS and .NET Core Web App (Part 2: CRUD Web API)](2020/2020-09-07_CRUD%20Web%20App%20ReactJS%20and%20.NET%20Core/Post.md)
 * [2020-08-31 Create a ReactJS and .NET Core Web App (Part 1: Baseline Projects)](2020/2020-08-31_React%20Front%20End%20NET%20Core%20Back%20End/Post.md)
