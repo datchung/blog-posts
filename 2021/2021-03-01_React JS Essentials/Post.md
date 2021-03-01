@@ -1,12 +1,12 @@
 [Blog Home Page](../../README.md)
 
-# React JS Essentials and Reference Guide
+# React Quick Start and Essentials
 
-_Tags: Javascript, React, UI_
+_Tags: Javascript, JS, React, Reference, UI_
 
 Table of Contents
 1. [Introduction](#intro)
-2. [Initialize a React Project](#initialize)
+2. [Create a React Project](#create)
 3. [Components](#components)
 4. [State](#state)
 5. [Using APIs with React](#api)
@@ -22,6 +22,10 @@ Table of Contents
 * Reference guide
 
 ## 8. <a name='conclusion'></a>Conclusion
+
+Next steps:
+* Testing components, state, hooks, router
+* Sharing state between components
 
 ## 9. <a name='comments'></a>Comments
 
