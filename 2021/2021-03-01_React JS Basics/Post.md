@@ -46,9 +46,9 @@ npm start
 
 You should see this in a browser
 
-| ![Default react app](npmStart.PNG) | 
+| ![Default React app](npmStart.PNG) | 
 |:--:| 
-| *Default react app* |
+| *Default React app* |
 
 ## 3. <a name='components'></a>Components
 
@@ -122,6 +122,12 @@ function RestaurantListItem({ restaurant }) {
 
 export default RestaurantListItem;
 ```
+
+At this point, the app should look like this
+
+| ![React app with components](components.PNG) | 
+|:--:| 
+| *React app with components* |
 
 ## 4. <a name='style'></a>Style Components
 
