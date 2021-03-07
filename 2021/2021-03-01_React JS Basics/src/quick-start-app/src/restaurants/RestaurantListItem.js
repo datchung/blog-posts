@@ -3,6 +3,7 @@ import './RestaurantListItem.css';
 // Destructure restaurant from props object
 function RestaurantListItem({ restaurant }) {
   function getRatingElement(rating) {
+    // Example of conditional rendering
     switch(rating) {
       case '5':
         return <span className="rating-text perfect">Perfection</span>;

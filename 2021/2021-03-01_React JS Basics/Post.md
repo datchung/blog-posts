@@ -131,22 +131,157 @@ At this point, the app should look like this.
 
 ## 4. <a name='style'></a>Style Components
 
-1. Add this to the top of `src/App.js`.
+1. Install a CSS framework of your choice. In this case, bulma.
+```
+npm install --save bulma
+```
+
+2. Add this to the top of `src/index.js`.
+```javascript
+// Import css framework
+import "bulma/css/bulma.min.css";
+```
+
+3. Modify `src/App.js` to look like this.
 ```javascript
 // Import css styles
 import './App.css';
-```
-2. Modify `src/App.css` to look like this.
-```css
-.App {
-  text-align: center;
+
+// Import the RestaurantList component from this path
+import RestaurantList from './restaurants/RestaurantList';
+
+function App() {
+  return (
+    <div className="App">
+      <h1 className="title is-1">My Restaurant Listing App</h1>
+
+      {/*Render the RestaurantList component and pass in a list of restaurants*/}
+      <RestaurantList restaurants={[
+        {
+          name: 'The Corner Coffee Shop',
+          rating: '3'
+        },
+        {
+          name: 'Spaghetti Paradise',
+          rating: '5'
+        },
+        {
+          name: 'BBQ Boss',
+          rating: '4'
+        }
+      ]}/>
+    </div>
+  );
 }
 
-h1 {
-  font-size: xx-large;
+export default App;
+```
+
+4. Modify `src/App.css` to look like this.
+```css
+.App {
+  margin: 30px;
 }
 ```
-3. 
+
+5. Modify `src/restaurants/RestaurantList.js` to look like this.
+```javascript
+// Import the RestaurantListItem component from this path
+import RestaurantListItem from './RestaurantListItem';
+
+import './RestaurantList.css';
+
+// Destructure restaurants from props object
+function RestaurantList({ restaurants }) {
+  return (
+    <ul>
+        {/*For each restaurant, render the RestaurantListItem component*/}
+        {restaurants.map(restaurant =>
+          <li key={restaurant.name}>
+            {/*Each child element must have a unique "key"*/}
+
+            {/*Pass the restaurant object to the nested component*/}
+            <RestaurantListItem
+              restaurant = {restaurant} />
+          </li>)}
+    </ul>
+  );
+}
+
+export default RestaurantList;
+```
+
+6. Create `src/restaurants/RestaurantList.css`.
+```css
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+```
+
+7. Modify `src/restaurants/RestaurantListItem.js` to look like this.
+```javascript
+import './RestaurantListItem.css';
+
+// Destructure restaurant from props object
+function RestaurantListItem({ restaurant }) {
+  function getRatingElement(rating) {
+    // Example of conditional rendering
+    switch(rating) {
+      case '5':
+        return <span className="rating-text perfect">Perfection</span>;
+      case '4':
+        return <span className="rating-text good">Pretty good</span>;
+      case '3':
+        return <span className="rating-text acceptable">Acceptable</span>;
+      default:
+        return <span className="rating-text">'Hmmm...'</span>;
+    }
+  }
+
+  return (
+    <div className="restaurant">
+      <div className="name">{restaurant.name}</div>
+      <div className="rating">
+        {restaurant.rating}/5 -
+        {getRatingElement(restaurant.rating)}
+      </div>
+    </div>
+  );
+}
+
+export default RestaurantListItem;
+```
+
+8. Create `src/restaurants/RestaurantListItem.css`.
+```css
+.restaurant {
+  margin: 20px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.rating-text {
+  font-style: italic;
+}
+
+.perfect {
+  color: green;
+}
+
+.good {
+  color: blue;
+}
+
+.acceptable {
+  color: orange;
+}
+```
+
+At this point, the app should look like this.
 
 | ![React app with styled components](styleComponents.PNG) | 
 |:--:| 
