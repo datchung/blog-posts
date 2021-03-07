@@ -1,7 +1,7 @@
 // Import the RestaurantListItem component from this path
 import RestaurantListItem from './RestaurantListItem';
 
-// Accept restaurants from props object
+// Destructure restaurants from props object
 function RestaurantList({ restaurants }) {
   return (
     <ul>
@@ -10,7 +10,7 @@ function RestaurantList({ restaurants }) {
           <li key={restaurant.name}>
             {/*Each child element must have a unique "key"*/}
 
-            {/*Pass the restaurant to the component*/}
+            {/*Pass the restaurant object to the nested component*/}
             <RestaurantListItem
               restaurant = {restaurant} />
           </li>)}

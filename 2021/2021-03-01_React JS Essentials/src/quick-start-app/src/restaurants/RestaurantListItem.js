@@ -1,4 +1,4 @@
-// Accept restaurant from props object
+// Destructure restaurant from props object
 function RestaurantListItem({ restaurant }) {
   return (
     <div>
