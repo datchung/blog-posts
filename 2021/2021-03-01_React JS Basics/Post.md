@@ -1,6 +1,6 @@
 [Blog Home Page](../../README.md)
 
-# React Quick Start and Essentials
+# React.js Basics
 
 _Tags: Javascript, JS, React, Reference, UI_
 
