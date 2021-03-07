@@ -1,0 +1,11 @@
+.restaurant {
+  margin: 20px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.rating-text {
+  font-style: italic;
+}

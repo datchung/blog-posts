@@ -1,3 +1,4 @@
+// Import css styles
 import './App.css';
 
 // Import the RestaurantList component from this path

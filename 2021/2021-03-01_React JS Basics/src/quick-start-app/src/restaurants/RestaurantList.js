@@ -1,6 +1,8 @@
 // Import the RestaurantListItem component from this path
 import RestaurantListItem from './RestaurantListItem';
 
+import './RestaurantList.css';
+
 // Destructure restaurants from props object
 function RestaurantList({ restaurants }) {
   return (

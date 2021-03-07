@@ -26,12 +26,12 @@ Table of Contents
 
 ## 2. <a name='initialize'></a>Initialize a React Project
 
-1. Open command line/terminal
-2. Install create-react-app package
+1. Open command line/terminal.
+2. Install create-react-app package.
 ```
 npm install -g create-react-app
 ```
-3. Initialize a React app
+3. Initialize a React app.
 ```
 npm init react-app quick-start-app
 ```
@@ -39,12 +39,12 @@ npm init react-app quick-start-app
 ```
 cd quick-start-app
 ```
-5. Start the app
+5. Start the app.
 ```
 npm start
 ```
 
-You should see this in a browser
+You should see this in a browser.
 
 | ![Default React app](npmStart.PNG) | 
 |:--:| 
@@ -85,7 +85,7 @@ function App() {
 
 export default App;
 ```
-2. Create the `RestaurantList` component at `src/restaurant/RestaurantList.js`
+2. Create the `RestaurantList` component at `src/restaurant/RestaurantList.js`.
 ```javascript
 // Import the RestaurantListItem component from this path
 import RestaurantListItem from './RestaurantListItem';
@@ -109,7 +109,7 @@ function RestaurantList({ restaurants }) {
 
 export default RestaurantList;
 ```
-3. Create the `RestaurantListItem` component at `src/restaurant/RestaurantListItem.js`
+3. Create the `RestaurantListItem` component at `src/restaurant/RestaurantListItem.js`.
 ```javascript
 // Destructure restaurant from props object
 function RestaurantListItem({ restaurant }) {
@@ -123,13 +123,34 @@ function RestaurantListItem({ restaurant }) {
 export default RestaurantListItem;
 ```
 
-At this point, the app should look like this
+At this point, the app should look like this.
 
 | ![React app with components](components.PNG) | 
 |:--:| 
 | *React app with components* |
 
 ## 4. <a name='style'></a>Style Components
+
+1. Add this to the top of `src/App.js`.
+```javascript
+// Import css styles
+import './App.css';
+```
+2. Modify `src/App.css` to look like this.
+```css
+.App {
+  text-align: center;
+}
+
+h1 {
+  font-size: xx-large;
+}
+```
+3. 
+
+| ![React app with styled components](styleComponents.PNG) | 
+|:--:| 
+| *React app with styled components* |
 
 ## 8. <a name='conclusion'></a>Conclusion
 
@@ -138,6 +159,9 @@ Next steps:
 * Sharing state between components
 * Code maintanability/best practices
 * Deploy a react app
+* Redux
+* Thunk
+* Selectors
 
 ## 9. <a name='comments'></a>Comments
 
