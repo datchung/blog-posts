@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+
+// Import the RestaurantList component from this path
+import RestaurantList from './restaurants/RestaurantList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>My Restaurant Listing App</h1>
+
+      {/*Render the RestaurantList component*/}
+      <RestaurantList restaurants={[
+        {
+          name: 'The Corner Coffee Shop',
+          rating: '3'
+        },
+        {
+          name: 'Spaghetti Paradise',
+          rating: '5'
+        },
+        {
+          name: 'BBQ Boss',
+          rating: '4'
+        }
+      ]}/>
     </div>
   );
 }

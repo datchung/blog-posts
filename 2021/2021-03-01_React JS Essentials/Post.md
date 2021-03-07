@@ -17,6 +17,7 @@ Table of Contents
 ## 1. <a name='intro'></a>Introduction
 
 * Intent of this article
+* What we will be building: restaurant listing
 * What is react
 * Intro to react concepts
 * Essentials
@@ -42,11 +43,57 @@ cd quick-start-app
 npm start
 ```
 
-You should see the
+You should see this in a browser
+
+| ![Default react app](npmStart.PNG) | 
+|:--:| 
+| *Default react app* |
 
 ## 3. <a name='components'></a>Components
 
+1. Modify `src/App.js` to look like this.
+```javascript
+import './App.css';
 
+// Import the RestaurantList component from this path
+import RestaurantList from './restaurants/RestaurantList';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>My Restaurant Listing App</h1>
+
+      {/*Render the RestaurantList component*/}
+      <RestaurantList />
+    </div>
+  );
+}
+
+export default App;
+```
+2. Create the `RestaurantList` component at `src/restaurant/RestaurantList.js`
+```javascript
+// Import the RestaurantListItem component from this path
+import RestaurantListItem from './RestaurantListItem';
+
+// Accept restaurants from props object
+function RestaurantList({ restaurants }) {
+  return (
+    <ul>
+        {/*For each restaurant, render the RestaurantListItem component*/}
+        {restaurants.map(restaurant => <RestaurantListItem
+            restaurant = {restaurant}
+        />)}
+    </ul>
+  );
+}
+
+export default RestaurantList;
+```
+3. Create the `RestaurantListItem` component at `src/restaurant/RestaurantListItem.js`
+```javascript
+
+```
 
 ## 8. <a name='conclusion'></a>Conclusion
 
