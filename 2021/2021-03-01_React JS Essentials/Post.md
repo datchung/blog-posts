@@ -8,9 +8,10 @@ Table of Contents
 1. [Introduction](#intro)
 2. [Initialize a React Project](#initialize)
 3. [Components](#components)
-4. [State](#state)
-5. [Using APIs with React](#api)
-6. [Router](#router)
+4. [Style Components](#style)
+4. [Router](#router)
+5. [State](#state)
+6. [Using APIs with React](#api)
 8. [Conclusion](#conclusion)
 9. [Comments](#comments)
 
@@ -63,8 +64,21 @@ function App() {
     <div className="App">
       <h1>My Restaurant Listing App</h1>
 
-      {/*Render the RestaurantList component*/}
-      <RestaurantList />
+      {/*Render the RestaurantList component and pass in a list of restaurants*/}
+      <RestaurantList restaurants={[
+        {
+          name: 'The Corner Coffee Shop',
+          rating: '3'
+        },
+        {
+          name: 'Spaghetti Paradise',
+          rating: '5'
+        },
+        {
+          name: 'BBQ Boss',
+          rating: '4'
+        }
+      ]}/>
     </div>
   );
 }
@@ -76,14 +90,19 @@ export default App;
 // Import the RestaurantListItem component from this path
 import RestaurantListItem from './RestaurantListItem';
 
-// Accept restaurants from props object
+// Destructure restaurants from props object
 function RestaurantList({ restaurants }) {
   return (
     <ul>
         {/*For each restaurant, render the RestaurantListItem component*/}
-        {restaurants.map(restaurant => <RestaurantListItem
-            restaurant = {restaurant}
-        />)}
+        {restaurants.map(restaurant =>
+          <li key={restaurant.name}>
+            {/*Each child element must have a unique "key"*/}
+
+            {/*Pass the restaurant object to the nested component*/}
+            <RestaurantListItem
+              restaurant = {restaurant} />
+          </li>)}
     </ul>
   );
 }
@@ -92,8 +111,19 @@ export default RestaurantList;
 ```
 3. Create the `RestaurantListItem` component at `src/restaurant/RestaurantListItem.js`
 ```javascript
+// Destructure restaurant from props object
+function RestaurantListItem({ restaurant }) {
+  return (
+    <div>
+      {restaurant.name}. Rating: {restaurant.rating}
+    </div>
+  );
+}
 
+export default RestaurantListItem;
 ```
+
+## 4. <a name='style'></a>Style Components
 
 ## 8. <a name='conclusion'></a>Conclusion
 
