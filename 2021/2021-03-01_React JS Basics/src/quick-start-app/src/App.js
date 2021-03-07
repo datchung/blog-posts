@@ -7,7 +7,7 @@ import RestaurantList from './restaurants/RestaurantList';
 function App() {
   return (
     <div className="App">
-      <h1>My Restaurant Listing App</h1>
+      <h1 className="title is-1">My Restaurant Listing App</h1>
 
       {/*Render the RestaurantList component and pass in a list of restaurants*/}
       <RestaurantList restaurants={[
