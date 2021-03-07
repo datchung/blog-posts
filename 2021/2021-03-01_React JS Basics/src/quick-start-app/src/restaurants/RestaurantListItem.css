@@ -9,3 +9,15 @@
 .rating-text {
   font-style: italic;
 }
+
+.perfect {
+  color: green;
+}
+
+.good {
+  color: blue;
+}
+
+.acceptable {
+  color: orange;
+}
