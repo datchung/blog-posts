@@ -52,7 +52,7 @@ You should see this in a browser.
 
 ## 3. <a name='components'></a>Components
 
-1. Modify `src/App.js` to look like this.
+1. Modify `src/App.js`.
 ```javascript
 import './App.css';
 
@@ -142,7 +142,7 @@ npm install --save bulma
 import "bulma/css/bulma.min.css";
 ```
 
-3. Modify `src/App.js` to look like this.
+3. Modify `src/App.js`.
 ```javascript
 // Import css styles
 import './App.css';
@@ -177,14 +177,14 @@ function App() {
 export default App;
 ```
 
-4. Modify `src/App.css` to look like this.
+4. Modify `src/App.css`.
 ```css
 .App {
   margin: 30px;
 }
 ```
 
-5. Modify `src/restaurants/RestaurantList.js` to look like this.
+5. Modify `src/restaurants/RestaurantList.js`.
 ```javascript
 // Import the RestaurantListItem component from this path
 import RestaurantListItem from './RestaurantListItem';
@@ -220,7 +220,7 @@ ul {
 }
 ```
 
-7. Modify `src/restaurants/RestaurantListItem.js` to look like this.
+7. Modify `src/restaurants/RestaurantListItem.js`.
 ```javascript
 import './RestaurantListItem.css';
 
