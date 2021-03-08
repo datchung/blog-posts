@@ -20,6 +20,7 @@ function RestaurantListItem({ restaurant }) {
   return (
     <Link to={{
       pathname: '/restaurant/' + restaurant.name,
+      // Pass restaurant object to linked page
       state: {
         restaurant: restaurant
       }
