@@ -1,29 +1,33 @@
 // Import css styles
 import './App.css';
 
-// Import the RestaurantList component from this path
-import RestaurantList from './restaurants/RestaurantList';
+// Import router component
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+// Import the page components
+import RestaurantListPage from './restaurants/RestaurantListPage';
+import RestaurantListItemPage from './restaurants/RestaurantListItemPage';
+import PageNotFound from './PageNotFound';
 
 function App() {
   return (
     <div className="App">
-      <h1 className="title is-1">My Restaurant Listing App</h1>
+      <section className="hero is-primary">
+        <div className="hero-body">
+          <p className="title">
+            Restaurant Listing App
+          </p>
+        </div>
+      </section>
 
-      {/*Render the RestaurantList component and pass in a list of restaurants*/}
-      <RestaurantList restaurants={[
-        {
-          name: 'The Corner Coffee Shop',
-          rating: '3'
-        },
-        {
-          name: 'Spaghetti Paradise',
-          rating: '5'
-        },
-        {
-          name: 'BBQ Boss',
-          rating: '4'
-        }
-      ]}/>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={RestaurantListPage} />
+          <Route path="/restaurant" component={RestaurantListPage} />
+          <Route path="/restaurant/:id" component={RestaurantListItemPage} />
+          <Route component={PageNotFound} />
+        </Switch>
+      </Router>
     </div>
   );
 }

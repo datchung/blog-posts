@@ -287,6 +287,10 @@ At this point, the app should look like this.
 |:--:| 
 | *React app with styled components* |
 
+## 5. <a name='router'></a>Router
+
+
+
 ## 8. <a name='conclusion'></a>Conclusion
 
 Next steps:

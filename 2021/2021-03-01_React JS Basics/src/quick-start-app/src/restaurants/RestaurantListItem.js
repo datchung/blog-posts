@@ -6,13 +6,13 @@ function RestaurantListItem({ restaurant }) {
     // Example of conditional rendering
     switch(rating) {
       case '5':
-        return <span className="rating-text perfect">Perfection</span>;
+        return <span className="tag is-success">Perfect</span>;
       case '4':
-        return <span className="rating-text good">Pretty good</span>;
+        return <span className="tag is-success is-light">Pretty good</span>;
       case '3':
-        return <span className="rating-text acceptable">Acceptable</span>;
+        return <span className="tag is-success is-light">Acceptable</span>;
       default:
-        return <span className="rating-text">'Hmmm...'</span>;
+        return <span className="tag is-danger">Hmmm...</span>;
     }
   }
 
