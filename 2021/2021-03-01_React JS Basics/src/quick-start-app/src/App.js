@@ -1,7 +1,7 @@
 // Import css styles
 import './App.css';
 
-// Import router component
+// Import router components
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Import the page components

@@ -153,7 +153,14 @@ import RestaurantList from './restaurants/RestaurantList';
 function App() {
   return (
     <div className="App">
-      <h1 className="title is-1">My Restaurant Listing App</h1>
+      <div className="App">
+      <section className="hero is-primary">
+        <div className="hero-body">
+          <p className="title">
+            Restaurant Listing App
+          </p>
+        </div>
+      </section>
 
       {/*Render the RestaurantList component and pass in a list of restaurants*/}
       <RestaurantList restaurants={[
@@ -222,63 +229,34 @@ ul {
 
 7. Modify `src/restaurants/RestaurantListItem.js`.
 ```javascript
-import './RestaurantListItem.css';
-
 // Destructure restaurant from props object
 function RestaurantListItem({ restaurant }) {
   function getRatingElement(rating) {
     // Example of conditional rendering
     switch(rating) {
       case '5':
-        return <span className="rating-text perfect">Perfection</span>;
+        return <span className="tag is-success">Perfect</span>;
       case '4':
-        return <span className="rating-text good">Pretty good</span>;
+        return <span className="tag is-success is-light">Pretty good</span>;
       case '3':
-        return <span className="rating-text acceptable">Acceptable</span>;
+        return <span className="tag is-success is-light">Acceptable</span>;
       default:
-        return <span className="rating-text">'Hmmm...'</span>;
+        return <span className="tag is-danger">Hmmm...</span>;
     }
   }
 
   return (
-    <div className="restaurant">
-      <div className="name">{restaurant.name}</div>
-      <div className="rating">
-        {restaurant.rating}/5 -
+    <div className="box mt-5">
+      <p className="title is-4">{restaurant.name}</p>
+      <p>
+        {restaurant.rating}/5&nbsp;
         {getRatingElement(restaurant.rating)}
-      </div>
+      </p>
     </div>
   );
 }
 
 export default RestaurantListItem;
-```
-
-8. Create `src/restaurants/RestaurantListItem.css`.
-```css
-.restaurant {
-  margin: 20px;
-}
-
-.name {
-  font-weight: bold;
-}
-
-.rating-text {
-  font-style: italic;
-}
-
-.perfect {
-  color: green;
-}
-
-.good {
-  color: blue;
-}
-
-.acceptable {
-  color: orange;
-}
 ```
 
 At this point, the app should look like this.
@@ -289,7 +267,15 @@ At this point, the app should look like this.
 
 ## 5. <a name='router'></a>Router
 
+1. Install react-router-dom.
+```
+npm install --save react-router-dom
+```
 
+2.
+## 6. <a name='state'></a>State
+
+## 7. <a name='api'></a>Using APIs with React
 
 ## 8. <a name='conclusion'></a>Conclusion
 

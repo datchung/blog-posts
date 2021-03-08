@@ -1,5 +1,4 @@
-import './RestaurantListItem.css';
-
+// Import Link component
 import { Link } from 'react-router-dom';
 
 // Destructure restaurant from props object
