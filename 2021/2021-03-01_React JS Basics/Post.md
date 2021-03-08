@@ -446,7 +446,7 @@ function RestaurantListItem({ restaurant }) {
 export default RestaurantListItem;
 ```
 
-When you click on a restaurant box, you should be taken to a page that displays the individual restaurant information.
+When you click on a restaurant box, you should be taken to a page that displays the individual restaurant information. Clicking on the Back button will take you to the previous page.
 
 | ![Individual restaurant page](router.PNG) | 
 |:--:| 
