@@ -17,12 +17,12 @@ function RestaurantListItem({ restaurant }) {
   }
 
   return (
-    <div className="restaurant">
-      <div className="name">{restaurant.name}</div>
-      <div className="rating">
-        {restaurant.rating}/5 -
+    <div className="box mt-5">
+      <p className="title is-4">{restaurant.name}</p>
+      <p>
+        {restaurant.rating}/5&nbsp;
         {getRatingElement(restaurant.rating)}
-      </div>
+      </p>
     </div>
   );
 }
