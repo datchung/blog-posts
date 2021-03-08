@@ -272,7 +272,143 @@ At this point, the app should look like this.
 npm install --save react-router-dom
 ```
 
-2.
+2. Modify `src/App.js`.
+```javascript
+// Import css styles
+import './App.css';
+
+// Import router components
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+// Import the page components
+import RestaurantListPage from './restaurants/RestaurantListPage';
+import RestaurantItemPage from './restaurants/RestaurantItemPage';
+import PageNotFound from './common/PageNotFound';
+
+function App() {
+  return (
+    <div className="App">
+      <section className="hero is-primary">
+        <div className="hero-body">
+          <p className="title">
+            Restaurant Listing App
+          </p>
+        </div>
+      </section>
+
+      {/*Map routes to components. Order matters!*/}
+      <Router>
+        <Switch>
+          <Route exact path="/" component={RestaurantListPage} />
+          <Route path="/restaurant/:id" component={RestaurantItemPage} />
+          <Route path="/restaurant" component={RestaurantListPage} />
+          <Route component={PageNotFound} />
+        </Switch>
+      </Router>
+    </div>
+  );
+}
+
+export default App;
+```
+
+3. Add `src/restaurants/RestaurantListPage.js`.
+```javascript
+// Import the RestaurantList component from this path
+import RestaurantList from './RestaurantList';
+
+function RestaurantListPage() {
+  return (
+    <>
+      {/*Render the RestaurantList component and pass in a list of restaurants*/}
+      <RestaurantList restaurants={[
+        {
+          name: 'The Corner Coffee Shop',
+          rating: '3',
+          description: 'Describe The Corner Coffee Shop here...'
+        },
+        {
+          name: 'Spaghetti Paradise',
+          rating: '5',
+          description: 'Describe Spaghetti Paradise here...'
+        },
+        {
+          name: 'BBQ Boss',
+          rating: '4',
+          description: 'Describe BBQ Boss here...'
+        }
+      ]}/>
+    </>
+  );
+}
+
+export default RestaurantListPage;
+```
+
+4. Add `src/restaurants/RestaurantItemPage.js`.
+```javascript
+// Import Back component
+import Back from '../common/Back';
+
+function RestaurantItemPage({location, history}) {
+  return (
+    <div className="box mt-5">
+      {/*Back button*/}
+      <Back history={history} />
+
+      <p className="title is-3">{location.state.restaurant.name}</p>
+      <p className="subtitle is-5">Rating: {location.state.restaurant.rating}/5</p>
+      <p>{location.state.restaurant.description}</p>
+    </div>
+  );
+}
+
+export default RestaurantItemPage;
+```
+
+5. Add `src/common/PageNotFound.js`.
+```javascript
+function PageNotFound() {
+  return (
+    <div className="box mt-5">
+      <p className="title is-4 has-text-danger">Error. Page not found.</p>
+    </div>
+  );
+}
+
+export default PageNotFound;
+```
+
+6. Add `src/common/Back.js`.
+```javascript
+// Destructure history from props object
+function Back({ history }) {
+  function onBackClick() {
+    history.goBack();
+  }
+  
+  return (
+  <div className="columns">
+    <div className="column">
+      <button
+        className="button is-small"
+        onClick={() => onBackClick()}>
+        Back
+      </button>
+    </div>
+  </div>
+  );
+}
+
+export default Back;
+```
+
+When you click on a restaurant box, you should be taken to a page that displays the individual restaurant information.
+
+| ![Individual restaurant page](router.PNG) | 
+|:--:| 
+| *Individual restaurant page* |
+
 ## 6. <a name='state'></a>State
 
 ## 7. <a name='api'></a>Using APIs with React

@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // Import the page components
 import RestaurantListPage from './restaurants/RestaurantListPage';
 import RestaurantItemPage from './restaurants/RestaurantItemPage';
-import PageNotFound from './PageNotFound';
+import PageNotFound from './common/PageNotFound';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         </div>
       </section>
 
+      {/*Map routes to components. Order matters!*/}
       <Router>
         <Switch>
           <Route exact path="/" component={RestaurantListPage} />
