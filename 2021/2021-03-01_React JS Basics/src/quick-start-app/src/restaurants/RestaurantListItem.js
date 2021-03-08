@@ -1,5 +1,7 @@
 import './RestaurantListItem.css';
 
+import { Link } from 'react-router-dom';
+
 // Destructure restaurant from props object
 function RestaurantListItem({ restaurant }) {
   function getRatingElement(rating) {
@@ -17,13 +19,20 @@ function RestaurantListItem({ restaurant }) {
   }
 
   return (
-    <div className="box mt-5">
-      <p className="title is-4">{restaurant.name}</p>
-      <p>
-        {restaurant.rating}/5&nbsp;
-        {getRatingElement(restaurant.rating)}
-      </p>
-    </div>
+    <Link to={{
+      pathname: '/restaurant/' + restaurant.name,
+      state: {
+        restaurant: restaurant
+      }
+    }}>
+      <div className="box mt-5">
+        <p className="title is-4">{restaurant.name}</p>
+        <p>
+          {restaurant.rating}/5&nbsp;
+          {getRatingElement(restaurant.rating)}
+        </p>
+      </div>
+    </Link>
   );
 }
 

@@ -8,15 +8,18 @@ function RestaurantListPage() {
       <RestaurantList restaurants={[
         {
           name: 'The Corner Coffee Shop',
-          rating: '3'
+          rating: '3',
+          description: 'Describe The Corner Coffee Shop here...'
         },
         {
           name: 'Spaghetti Paradise',
-          rating: '5'
+          rating: '5',
+          description: 'Describe Spaghetti Paradise here...'
         },
         {
           name: 'BBQ Boss',
-          rating: '4'
+          rating: '4',
+          description: 'Describe BBQ Boss here...'
         }
       ]}/>
     </>
