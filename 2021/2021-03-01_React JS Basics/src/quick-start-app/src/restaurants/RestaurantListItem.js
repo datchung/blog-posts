@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 // Import Link component
 import { Link } from 'react-router-dom';
 
@@ -5,7 +7,14 @@ import { Link } from 'react-router-dom';
 import Box from '../common/Box';
 
 // Destructure restaurant from props object
-function RestaurantListItem({ restaurant }) {
+function RestaurantListItem({ restaurant, handleSelect }) {
+  const [checked, setChecked] = useState(false);
+
+  function handleCheck() {
+    handleSelect(!checked, restaurant.name);
+    setChecked(!checked);
+  }
+
   function getRatingElement(rating) {
     // Example of conditional rendering
     switch(rating) {
@@ -21,7 +30,6 @@ function RestaurantListItem({ restaurant }) {
   }
 
   return (
-    
       <Box>
         <p className="title is-3">
           <Link to={{
@@ -34,10 +42,12 @@ function RestaurantListItem({ restaurant }) {
             {restaurant.name}
           </Link>
         </p>
-        
+
         <p>
           <label className="checkbox">
-            <input type="checkbox" />
+            <input type="checkbox"
+              checked={checked}
+              onChange={handleCheck} />
             &nbsp;{restaurant.rating}/5&nbsp;
           </label>
           
