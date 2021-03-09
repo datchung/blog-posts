@@ -21,20 +21,29 @@ function RestaurantListItem({ restaurant }) {
   }
 
   return (
-    <Link to={{
-      pathname: '/restaurant/' + restaurant.name,
-      // Pass restaurant object to linked page
-      state: {
-        restaurant: restaurant
-      }
-    }}>
-      <Box title={restaurant.name}>
+    
+      <Box>
+        <p className="title is-3">
+          <Link to={{
+            pathname: '/restaurant/' + restaurant.name,
+            // Pass restaurant object to linked page
+            state: {
+              restaurant: restaurant
+            }
+          }}>
+            {restaurant.name}
+          </Link>
+        </p>
+        
         <p>
-          {restaurant.rating}/5&nbsp;
+          <label className="checkbox">
+            <input type="checkbox" />
+            &nbsp;{restaurant.rating}/5&nbsp;
+          </label>
+          
           {getRatingElement(restaurant.rating)}
         </p>
       </Box>
-    </Link>
   );
 }
 
