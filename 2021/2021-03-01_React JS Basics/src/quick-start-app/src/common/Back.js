@@ -5,7 +5,7 @@ function Back({ history }) {
   }
   
   return (
-  <div className="columns">
+  <div className="columns mt-5">
     <div className="column">
       <button
         className="button is-small"

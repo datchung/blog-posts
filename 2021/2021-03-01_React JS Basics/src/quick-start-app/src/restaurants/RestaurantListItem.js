@@ -1,6 +1,9 @@
 // Import Link component
 import { Link } from 'react-router-dom';
 
+// Import common components
+import Box from '../common/Box';
+
 // Destructure restaurant from props object
 function RestaurantListItem({ restaurant }) {
   function getRatingElement(rating) {
@@ -25,13 +28,12 @@ function RestaurantListItem({ restaurant }) {
         restaurant: restaurant
       }
     }}>
-      <div className="box mt-5">
-        <p className="title is-4">{restaurant.name}</p>
+      <Box title={restaurant.name}>
         <p>
           {restaurant.rating}/5&nbsp;
           {getRatingElement(restaurant.rating)}
         </p>
-      </div>
+      </Box>
     </Link>
   );
 }
