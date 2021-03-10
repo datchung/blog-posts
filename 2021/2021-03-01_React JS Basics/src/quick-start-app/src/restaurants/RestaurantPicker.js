@@ -38,7 +38,7 @@ function RestaurantPicker({ selectedRestaurants }) {
           {getMessage(selectedRestaurants.length)}
         </div>
       </article>
-      <Modal isActive={isModalActive} setActive={setModalActive}>
+      <Modal isActive={isModalActive} setInactive={() => setModalActive(false)}>
         <Box>How about {pickedRestaurant}?</Box>
       </Modal>
     </>
