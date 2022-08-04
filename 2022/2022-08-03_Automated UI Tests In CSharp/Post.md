@@ -6,6 +6,7 @@ _Tags: .NET, C#, UI, Testing, Automated_
 
 Table of Contents
 1. [Introduction](#intro)
+2. [Create a Sample App to Test](#sample)
 2. [Create a Test Project](#project)
 3. [Add Nuget Package References](#nuget)
 4. [Create a Session Class](#session)
@@ -21,19 +22,26 @@ Writing automated UI tests in C# is possible with the use of a library known as 
 
 This article introduces WinApppDriver, how to get started, and how to write basic tests.
 
-## 2. <a name='project'></a>Create a Test Project
+## 2. <a name='sample'></a>Create a Sample App to Test
+
+1. Open Visual Studio
+2. Create a new project
+3. 
+
+## 3. <a name='project'></a>Create a Test Project
 
 
-## 3. <a name='nuget'></a>Add Nuget Package References
+
+## 4. <a name='nuget'></a>Add Nuget Package References
 
 
-## 4. <a name='session'></a>Create a Session Class
+## 5. <a name='session'></a>Create a Session Class
 
 
-## 5. <a name='tests'></a>Write Tests
+## 6. <a name='tests'></a>Write Tests
 
 
-## 6. <a name='conclusion'></a>Conclusion
+## 7. <a name='conclusion'></a>Conclusion
 
 This course is a practical introduction to GraphQL with real examples. Here are some related topics further research:
 * Authentication and authorization
@@ -41,6 +49,6 @@ This course is a practical introduction to GraphQL with real examples. Here are 
 * HTTP request equivalent of GraphQL queries
 * Usage with SPA frameworks (eg. Reactjs)
 
-## 7. <a name='comments'></a>Comments
+## 8. <a name='comments'></a>Comments
 
 _Reply to [this tweet](https://twitter.com/innochi_mob/status/)._
