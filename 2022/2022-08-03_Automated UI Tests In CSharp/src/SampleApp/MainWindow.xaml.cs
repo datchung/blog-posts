@@ -14,7 +14,7 @@ namespace SampleApp
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"You submitted: {NameTextBox.Text}");
+            MessageBox.Show($"You submitted: {NameTextBox.Text}", "A MessageBox", MessageBoxButton.OK);
         }
     }
 }
