@@ -81,7 +81,7 @@ namespace SampleApp
 1. Add a MSTest Test Project.
 2. Name the project SampleApp.Test and target .NET 6.
 3. Install the Nuget package `Appium.WebDriver`. At the time of this writing, the latest version is 4.3.2. The project's Nuget packages should look similar to this:
-![nuget](nuget.PNG)
+![nuget](nuget.png)
 4. Add the following Post Build event to the SampleApp project. This copies the output of the SampleApp project to the SampleApp.Test project's output directory. This will simplify the next step.
 ```
 xcopy "$(ProjectDir)bin\$(ConfigurationName)" "$(SolutionDir)SampleApp.Test\$(OutDir)" /y /e
