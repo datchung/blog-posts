@@ -7,9 +7,9 @@ _Tags: .NET, C#, UI, Testing, Automated_
 Table of Contents
 1. [Introduction](#intro)
 2. [Create a Sample App to Test](#sample)
-2. [Create a Test Project](#project)
-3. [Add Nuget Package References](#nuget)
-4. [Create a Session Class](#session)
+2. [Install WinAppDriver](#install)
+3. [Create a Test Project](#project)
+4. [Create a Test Session](#session)
 5. [Write Tests](#tests)
 6. [Conclusion](#conclusion)
 7. [Comments](#comments)
@@ -87,7 +87,7 @@ namespace SampleApp
 xcopy "$(ProjectDir)bin\$(ConfigurationName)" "$(SolutionDir)SampleApp.Test\$(OutDir)" /y /e
 ```
 
-## 5. <a name='session'></a>Create a Teset Session
+## 5. <a name='session'></a>Create a Test Session
 
 1. Add a new class named `MainWindowSession` to SampleApp.Test.
 2. Add the following members to `MainWindowSession`.
@@ -277,12 +277,9 @@ public void ClickSubmitOpensDialog()
 
 ## 7. <a name='conclusion'></a>Conclusion
 
-This course is a practical introduction to GraphQL with real examples. Here are some related topics further research:
-* Authentication and authorization
-* Subscription performance (eg. how do connections scale, etc)
-* HTTP request equivalent of GraphQL queries
-* Usage with SPA frameworks (eg. Reactjs)
+The result of the final test looks like this
+![final](final.gif)
 
 ## 8. <a name='comments'></a>Comments
 
-_Reply to [this tweet](https://twitter.com/innochi_mob/status/)._
+_Reply to [this tweet]()._
